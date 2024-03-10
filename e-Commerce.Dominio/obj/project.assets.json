@@ -1,11 +1,82 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "FluentValidation/11.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {}
+        }
+      },
+      "SequentialGuidGenerator/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/SequentialGuidGenerator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/SequentialGuidGenerator.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FluentValidation/11.8.0": {
+      "sha512": "TiEaaYqSIAS+wXQv46LRm8Mca092XYNePD0n231Hqlkmm5FuToZoWnjI1ef/vJUxBzqR7/k2vaVQXxijNgVKRQ==",
+      "type": "package",
+      "path": "fluentvalidation/11.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.8.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "SequentialGuidGenerator/1.1.0": {
+      "sha512": "Jtw6Vy8xZol5WlKiFrAHbqPaD5o6XN6vdcLsvxZVbw2Nv/8xmxZoJCwD3P8BOxWnGeNDUnhACtLPsa3bpNKluA==",
+      "type": "package",
+      "path": "sequentialguidgenerator/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SequentialGuidGenerator.XML",
+        "lib/net45/SequentialGuidGenerator.dll",
+        "lib/net451/SequentialGuidGenerator.XML",
+        "lib/net451/SequentialGuidGenerator.dll",
+        "lib/net452/SequentialGuidGenerator.XML",
+        "lib/net452/SequentialGuidGenerator.dll",
+        "lib/net46/SequentialGuidGenerator.XML",
+        "lib/net46/SequentialGuidGenerator.dll",
+        "lib/net461/SequentialGuidGenerator.XML",
+        "lib/net461/SequentialGuidGenerator.dll",
+        "lib/net462/SequentialGuidGenerator.XML",
+        "lib/net462/SequentialGuidGenerator.dll",
+        "lib/netstandard1.0/SequentialGuidGenerator.XML",
+        "lib/netstandard1.0/SequentialGuidGenerator.dll",
+        "sequentialguidgenerator.1.1.0.nupkg.sha512",
+        "sequentialguidgenerator.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "FluentValidation >= 11.8.0",
+      "SequentialGuidGenerator >= 1.1.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ruan.souza\\.nuget\\packages\\": {}
@@ -13,11 +84,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
       "projectName": "e-Commerce.Dominio",
-      "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
+      "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
       "packagesPath": "C:\\Users\\ruan.souza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\obj\\",
+      "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ruan.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +116,16 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.8.0, )"
+          },
+          "SequentialGuidGenerator": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

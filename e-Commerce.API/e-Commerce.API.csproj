@@ -8,11 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Compartilhado\" />
+    <Folder Include="ViewModel\Compartilhado\" />
+    <Folder Include="ViewModel\ModuloCarrinho\" />
+    <Folder Include="ViewModel\ModuloCliente\" />
+    <Folder Include="ViewModel\ModuloProduto\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\e-Commerce.Dominio\e-Commerce.Dominio.csproj" />
+    <ProjectReference Include="..\e-Commerce.Servico\e-Commerce.Servico.csproj" />
   </ItemGroup>
 
 </Project>

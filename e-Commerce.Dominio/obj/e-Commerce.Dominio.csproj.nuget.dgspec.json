@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {}
+    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {
+    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
         "projectName": "e-Commerce.Dominio",
-        "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
+        "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
         "packagesPath": "C:\\Users\\ruan.souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ruan.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.0, )"
+            },
+            "SequentialGuidGenerator": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,0 +1,17 @@
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\bin\Debug\net6.0\e-Commerce.Servico.deps.json
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\bin\Debug\net6.0\e-Commerce.Servico.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\bin\Debug\net6.0\e-Commerce.Servico.pdb
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\bin\Debug\net6.0\e-Commerce.Dominio.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\bin\Debug\net6.0\e-Commerce.Infra.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\bin\Debug\net6.0\e-Commerce.Dominio.pdb
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\bin\Debug\net6.0\e-Commerce.Infra.pdb
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.csproj.AssemblyReference.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.AssemblyInfoInputs.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.AssemblyInfo.cs
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.csproj.CoreCompileInputs.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.csproj.CopyComplete
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\refint\e-Commerce.Servico.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\e-Commerce.Servico.pdb
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Servico\obj\Debug\net6.0\ref\e-Commerce.Servico.dll

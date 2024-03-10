@@ -1,0 +1,12 @@
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\bin\Debug\net6.0\e-Commerce.Dominio.deps.json
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\bin\Debug\net6.0\e-Commerce.Dominio.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\bin\Debug\net6.0\e-Commerce.Dominio.pdb
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\e-Commerce.Dominio.csproj.AssemblyReference.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\e-Commerce.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\e-Commerce.Dominio.AssemblyInfoInputs.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\e-Commerce.Dominio.AssemblyInfo.cs
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\e-Commerce.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\e-Commerce.Dominio.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\refint\e-Commerce.Dominio.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\e-Commerce.Dominio.pdb
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.Dominio\obj\Debug\net6.0\ref\e-Commerce.Dominio.dll

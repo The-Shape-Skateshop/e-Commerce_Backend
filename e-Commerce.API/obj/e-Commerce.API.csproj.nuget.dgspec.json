@@ -1,17 +1,105 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.API\\e-Commerce.API.csproj": {}
+    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.API\\e-Commerce.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.API\\e-Commerce.API.csproj": {
+    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.API\\e-Commerce.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.API\\e-Commerce.API.csproj",
+        "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.API\\e-Commerce.API.csproj",
         "projectName": "e-Commerce.API",
-        "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.API\\e-Commerce.API.csproj",
+        "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.API\\e-Commerce.API.csproj",
         "packagesPath": "C:\\Users\\ruan.souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce.API\\obj\\",
+        "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ruan.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {
+                "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj"
+              },
+              "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Servico\\e-Commerce.Servico.csproj": {
+                "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Servico\\e-Commerce.Servico.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
+        "projectName": "e-Commerce.Dominio",
+        "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
+        "packagesPath": "C:\\Users\\ruan.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ruan.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +128,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Swashbuckle.AspNetCore": {
+            "FluentValidation": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[11.8.0, )"
+            },
+            "SequentialGuidGenerator": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             }
           },
           "imports": [
@@ -56,9 +148,151 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Infra\\e-Commerce.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Infra\\e-Commerce.Infra.csproj",
+        "projectName": "e-Commerce.Infra",
+        "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Infra\\e-Commerce.Infra.csproj",
+        "packagesPath": "C:\\Users\\ruan.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ruan.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {
+                "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Servico\\e-Commerce.Servico.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Servico\\e-Commerce.Servico.csproj",
+        "projectName": "e-Commerce.Servico",
+        "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Servico\\e-Commerce.Servico.csproj",
+        "packagesPath": "C:\\Users\\ruan.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Servico\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ruan.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj": {
+                "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj"
+              },
+              "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Infra\\e-Commerce.Infra.csproj": {
+                "projectPath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Infra\\e-Commerce.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.15.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
