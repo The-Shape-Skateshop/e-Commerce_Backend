@@ -24,13 +24,13 @@ namespace e_Commerce.Dominio.ModuloCarrinho
         {
             get
             {
-                return ListaProduto.Select(c => c.Id).ToList<Guid>();
+                return Produtos.Select(c => c.Id).ToList<Guid>();
             }
         }
 
         public Carrinho()
         {
-            ListaProduto = new List<Produto>();
+            Produtos = new List<Produto>();
         }
 
         public Carrinho(decimal valorTotal, string descricao, Cliente cliente) : this()
@@ -47,7 +47,7 @@ namespace e_Commerce.Dominio.ModuloCarrinho
 
         public void AdicionarProdutoNoCarrinho(Produto produto)
         {
-            ListaProduto.Add(produto);
+            Produtos.Add(produto);
         }
     }
 }
