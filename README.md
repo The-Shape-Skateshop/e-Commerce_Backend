@@ -20,7 +20,7 @@ O The Shape Skateshop é um e-commerce especializado na venda de peças, roupas 
 ### Backend
 - **C#**: Linguagem de programação principal para o desenvolvimento do backend.
 - **Entity Framework Core**: Ferramenta de mapeamento objeto-relacional (ORM) para interação com o banco de dados.
-- **SQL Server**: Sistema de gerenciamento de banco de dados relacional utilizado para armazenar dados.
+- **Postgre**: Sistema de gerenciamento de banco de dados relacional utilizado para armazenar dados.
 - **Visual Studio**: Ambiente de desenvolvimento integrado utilizado para o desenvolvimento do backend.
 - **.NET Core**: Framework utilizado para o desenvolvimento do backend.
 - **ASP.NET**: Plataforma da Microsoft para o desenvolvimento de aplicações Web.
