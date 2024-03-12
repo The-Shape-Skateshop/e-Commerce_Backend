@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using e_Commerce.Dominio.ModuloCarrinho;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace e_Commerce.Infra.ModuloCarrinho
 {
-    public class MapeadorCarrinho
+    public class MapeadorCarrinho : IEntityTypeConfiguration<Carrinho>
     {
+        public void Configure(EntityTypeBuilder<Carrinho> builder)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

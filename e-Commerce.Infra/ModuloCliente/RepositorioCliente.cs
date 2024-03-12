@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using e_Commerce.Dominio.ModuloCliente;
 
 namespace e_Commerce.Infra.ModuloCliente
 {
-    public class RepositorioCliente
+    public class RepositorioCliente : RepositorioBase<Cliente>, IRepositorioCliente
     {
     }
 }

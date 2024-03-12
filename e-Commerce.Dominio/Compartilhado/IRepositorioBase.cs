@@ -4,8 +4,8 @@
         where T : EntidadeBase<T>
     {
         public Task CriarAsync(T registro);
-        public Task EditarAsync(T registro);
-        public Task DeletarAsync(T registro);
+        public void EditarAsync(T registro);
+        public void DeletarAsync(T registro);
         public Task<List<T>> SelecionarAsync();
         public Task<T> SelecionarPorIdAsync(Guid id);
     }

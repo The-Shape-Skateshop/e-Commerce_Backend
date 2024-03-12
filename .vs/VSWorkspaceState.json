@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\e-Commerce.Dominio",
+    "\\e-Commerce.Dominio\\ModuloCarrinho"
   ],
-  "SelectedNode": "\\e-Commerce.sln",
+  "SelectedNode": "\\e-Commerce.Dominio\\ModuloCarrinho\\Carrinho.cs",
   "PreviewInSolutionExplorer": false
 }

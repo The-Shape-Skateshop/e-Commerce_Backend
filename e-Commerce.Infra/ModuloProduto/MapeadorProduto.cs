@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using e_Commerce.Dominio.ModuloProduto;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace e_Commerce.Infra.ModuloProduto
 {
-    public class MapeadorProduto
+    public class MapeadorProduto : IEntityTypeConfiguration<Produto>
     {
+        public void Configure(EntityTypeBuilder<Produto> builder)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

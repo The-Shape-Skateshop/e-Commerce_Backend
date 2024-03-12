@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using e_Commerce.Dominio.ModuloProduto;
 
 namespace e_Commerce.Infra.ModuloProduto
 {
-    public class RepositorioProduto
+    public class RepositorioProduto : RepositorioBase<Produto>, IRepositorioProduto
     {
     }
 }

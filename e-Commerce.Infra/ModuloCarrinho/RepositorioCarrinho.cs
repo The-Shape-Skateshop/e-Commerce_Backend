@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using e_Commerce.Dominio.ModuloCarrinho;
 
 namespace e_Commerce.Infra.ModuloCarrinho
 {
-    public class RepositorioCarrinho
+    public class RepositorioCarrinho : RepositorioBase<Carrinho>, IRepositorioCarrinho
     {
     }
 }

@@ -7,7 +7,7 @@ namespace e_Commerce.Dominio.ModuloCarrinho
     {
         #region Atributos que serão mapeados
         public decimal ValorTotal {  get; set; }
-        public DateTime DataHora { get; set; }
+        public DateOnly Data { get; set; }
         public string Descricao { get; set; }
         public Cliente Cliente { get; set; }
         public List<Produto> Produtos { get; set; }

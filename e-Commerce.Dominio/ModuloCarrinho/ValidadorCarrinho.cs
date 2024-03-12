@@ -12,7 +12,7 @@ namespace e_Commerce.Dominio.ModuloCarrinho
                 .MinimumLength(5)
                 .WithMessage("Descrição inválida, deve conter no minimo 5 caracteres");
 
-            RuleFor(c => c.DataHora)
+            RuleFor(c => c.Data)
                 .NotNull()
                 .NotEmpty();
 
