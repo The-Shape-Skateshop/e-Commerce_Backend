@@ -1,4 +1,5 @@
 ﻿using e_Commerce.Dominio.ModuloCarrinho;
+using e_Commerce.Dominio.ModuloItem;
 
 namespace e_Commerce.Dominio.ModuloProduto
 {
@@ -11,18 +12,18 @@ namespace e_Commerce.Dominio.ModuloProduto
         public decimal Valor { get; set; }
         #endregion
 
-        public List<Carrinho> ListaCarrinhos { get; set; }
+        public List<Item> Itens { get; set; }
         public List<Guid> Id_Carrinhos
         {
             get
             {
-                return ListaCarrinhos.Select(c => c.Id).ToList<Guid>();
+                return Itens.Select(c => c.Id).ToList<Guid>();
             }
         }
 
         public Produto()
         {
-            ListaCarrinhos = new List<Carrinho>();
+            Itens = new List<Item>();
         }
 
         public Produto(string nome, string descricao, decimal valor, string imagem) : this()

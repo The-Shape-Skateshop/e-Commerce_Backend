@@ -10,22 +10,22 @@ namespace e_Commerce.Infra.Compartilhado
             throw new NotImplementedException();
         }
 
-        public Task DeletarAsync(T registro)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task EditarAsync(T registro)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<List<T>> SelecionarAsync()
         {
             throw new NotImplementedException();
         }
 
         public Task<T> SelecionarPorIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IRepositorioBase<T>.Deletar(T registro)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IRepositorioBase<T>.Editar(T registro)
         {
             throw new NotImplementedException();
         }

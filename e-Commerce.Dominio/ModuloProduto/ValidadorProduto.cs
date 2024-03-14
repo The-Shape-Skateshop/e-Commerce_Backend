@@ -10,15 +10,20 @@
                 .MinimumLength(3)
                 .WithMessage("Nome inválido. O nome deve conter no minimo 3 caracteres");
 
-            RuleFor(c => c.Descricao)
+            RuleFor(p => p.Descricao)
                 .NotNull()
                 .NotEmpty()
                 .MinimumLength(5)
                 .WithMessage("Descrição inválida, deve conter no minimo 5 caracteres");
 
-            RuleFor(c => c.Valor)
+            RuleFor(p => p.Valor)
                 .NotNull()
                 .NotEmpty();
+
+            RuleFor(p => p.Imagem)
+                .NotNull()
+                .NotEmpty();
+
 
         }
     }

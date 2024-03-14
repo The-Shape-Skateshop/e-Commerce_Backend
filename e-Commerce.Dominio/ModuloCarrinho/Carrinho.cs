@@ -1,4 +1,5 @@
 ﻿using e_Commerce.Dominio.ModuloCliente;
+using e_Commerce.Dominio.ModuloItem;
 using e_Commerce.Dominio.ModuloProduto;
 
 namespace e_Commerce.Dominio.ModuloCarrinho
@@ -10,7 +11,7 @@ namespace e_Commerce.Dominio.ModuloCarrinho
         public DateOnly Data { get; set; }
         public string Descricao { get; set; }
         public Cliente Cliente { get; set; }
-        public List<Produto> Produtos { get; set; }
+        public List<Item> Itens { get; set; }
         #endregion
 
         public Guid Id_Cliente
@@ -20,17 +21,17 @@ namespace e_Commerce.Dominio.ModuloCarrinho
                 return Cliente.Id;
             }
         }
-        public List<Guid> Id_Produtos
+        public List<Guid> Id_Item
         {
             get
             {
-                return Produtos.Select(c => c.Id).ToList<Guid>();
+                return Itens.Select(c => c.Id).ToList<Guid>();
             }
         }
 
         public Carrinho()
         {
-            Produtos = new List<Produto>();
+            Itens = new List<Item>();
         }
 
         public Carrinho(decimal valorTotal, string descricao, Cliente cliente) : this()
@@ -45,9 +46,9 @@ namespace e_Commerce.Dominio.ModuloCarrinho
             Id = id;
         }
 
-        public void AdicionarProdutoNoCarrinho(Produto produto)
+        public void AdicionarProdutoNoCarrinho(Item item)
         {
-            Produtos.Add(produto);
+            Itens.Add(item);
         }
     }
 }

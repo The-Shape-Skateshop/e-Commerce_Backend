@@ -1,6 +1,4 @@
-﻿using e_Commerce.Dominio.ModuloCliente;
-
-namespace e_Commerce.Dominio.ModuloCarrinho
+﻿namespace e_Commerce.Dominio.ModuloCarrinho
 {
     public class ValidadorCarrinho : AbstractValidator<Carrinho>
     {
@@ -24,7 +22,7 @@ namespace e_Commerce.Dominio.ModuloCarrinho
                 .NotNull()
                 .NotEmpty();
 
-            RuleFor(c => c.Produtos)
+            RuleFor(c => c.Itens)
                 .NotNull()
                 .NotEmpty();
         }
