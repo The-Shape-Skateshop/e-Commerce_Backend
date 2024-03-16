@@ -5,29 +5,38 @@ namespace e_Commerce.Infra.Compartilhado
     public class RepositorioBase<T> : IRepositorioBase<T>
         where T : EntidadeBase<T>
     {
-        public Task CriarAsync(T registro)
+        protected DbSet<T> dbSet;
+        private readonly DbContext dbContext;
+
+        public RepositorioBase(IContextoPersistencia ctx)
         {
-            throw new NotImplementedException();
+            dbContext = (e_CommerceDbContext)ctx;
+            dbSet = dbContext.Set<T>();
         }
 
-        public Task<List<T>> SelecionarAsync()
+        public async Task CriarAsync(T registro)
         {
-            throw new NotImplementedException();
+            await dbSet.AddAsync(registro);
         }
 
-        public Task<T> SelecionarPorIdAsync(Guid id)
+        public async Task<List<T>> SelecionarTodosAsync()
         {
-            throw new NotImplementedException();
+            return await dbSet.ToListAsync();
+        }
+
+        public async Task<T> SelecionarPorIdAsync(Guid id)
+        {
+            return await dbSet.SingleOrDefaultAsync(x => x.Id == id);
         }
 
         void IRepositorioBase<T>.Deletar(T registro)
         {
-            throw new NotImplementedException();
+            dbSet.Remove(registro);
         }
 
         void IRepositorioBase<T>.Editar(T registro)
         {
-            throw new NotImplementedException();
+            dbSet.Update(registro);
         }
     }
 }

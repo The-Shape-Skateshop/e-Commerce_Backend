@@ -1,14 +1,17 @@
 ﻿using e_Commerce.API.Config.TratadoresErros;
 using e_Commerce.Dominio.Compartilhado;
-using e_Commerce.Dominio.ModuloCarrinho;
 using e_Commerce.Dominio.ModuloCliente;
+using e_Commerce.Dominio.ModuloItem;
+using e_Commerce.Dominio.ModuloPedido;
 using e_Commerce.Dominio.ModuloProduto;
 using e_Commerce.Infra.Compartilhado;
-using e_Commerce.Infra.ModuloCarrinho;
 using e_Commerce.Infra.ModuloCliente;
+using e_Commerce.Infra.ModuloItem;
+using e_Commerce.Infra.ModuloPedido;
 using e_Commerce.Infra.ModuloProduto;
-using e_Commerce.Servico.ModuloCarrinho;
 using e_Commerce.Servico.ModuloCliente;
+using e_Commerce.Servico.ModuloItem;
+using e_Commerce.Servico.ModuloPedido;
 using e_Commerce.Servico.ModuloProduto;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,14 +32,17 @@ namespace e_Commerce.API.Config.ExtensionMethods
             //Em outros lugares do código, pode injetar IContextoPersistencia e obter uma instância de e_CommerceDbContext
             services.AddTransient<ManipuladorExcecoes>();
 
-            services.AddTransient<IRepositorioCarrinho, RepositorioCarrinho>();
-            services.AddTransient<ServicoCarrinho>();
+            services.AddTransient<IRepositorioPedido, RepositorioPedido>();
+            services.AddTransient<ServicoPedido>();
 
             services.AddTransient<IRepositorioCliente, RepositorioCliente>();
             services.AddTransient<ServicoCliente>();
 
             services.AddTransient<IRepositorioProduto, RepositorioProduto>();
             services.AddTransient<ServicoProduto>();
+
+            services.AddTransient<IRepositorioItem, RepositorioItem>();
+            services.AddTransient<ServicoItem>();
         }
     }
 }

@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\e-Commerce.API",
+    "\\e-Commerce.API\\Config",
+    "\\e-Commerce.API\\Config\\TratadoresErros",
     "\\e-Commerce.Dominio",
-    "\\e-Commerce.Dominio\\ModuloCarrinho"
+    "\\e-Commerce.Dominio\\Compartilhado",
+    "\\e-Commerce.Dominio\\ModuloProduto",
+    "\\e-Commerce.Infra",
+    "\\e-Commerce.Infra\\ModuloCliente",
+    "\\e-Commerce.Infra\\ModuloItem"
   ],
-  "SelectedNode": "\\e-Commerce.Dominio\\ModuloCarrinho\\Carrinho.cs",
+  "SelectedNode": "\\e-Commerce.API\\Config\\TratadoresErros\\ManipuladorExcecoes.cs",
   "PreviewInSolutionExplorer": false
 }

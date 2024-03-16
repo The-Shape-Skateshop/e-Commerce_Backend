@@ -1,4 +1,4 @@
-﻿using e_Commerce.Dominio.ModuloCarrinho;
+﻿using e_Commerce.Dominio.ModuloPedido;
 using e_Commerce.Dominio.ModuloProduto;
 
 namespace e_Commerce.Dominio.ModuloItem
@@ -6,16 +6,16 @@ namespace e_Commerce.Dominio.ModuloItem
     public class Item : EntidadeBase<Item>
     {
         #region Atributos que serão mapeados
-        public Carrinho Carrinho { get; set; }
+        public Pedido Pedido { get; set; }
         public List<Produto> Produtos { get; set; }
         public int Qtd_Produto {  get; set; }
         #endregion
 
-        public Guid Id_Carrinho
+        public Guid Id_Pedido
         {
             get
             {
-                return Carrinho.Id;
+                return Pedido.Id;
             }
         }
         public List<Guid> Id_Produtos
@@ -31,13 +31,13 @@ namespace e_Commerce.Dominio.ModuloItem
             Produtos = new List<Produto>();
         }
 
-        public Item(Carrinho carrinho, int qtd_Produto) : this()
+        public Item(Pedido pedido, int qtd_Produto) : this()
         {
-            Carrinho = carrinho;
+            Pedido = pedido;
             Qtd_Produto = qtd_Produto;
         }
 
-        public Item(Guid id, Carrinho carrinho, int qtd_Produto) : this(carrinho, qtd_Produto)
+        public Item(Guid id, Pedido pedido, int qtd_Produto) : this(pedido, qtd_Produto)
         {
             Id = id;
         }

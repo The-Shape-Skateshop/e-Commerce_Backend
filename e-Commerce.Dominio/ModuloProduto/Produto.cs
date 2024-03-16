@@ -1,5 +1,4 @@
-﻿using e_Commerce.Dominio.ModuloCarrinho;
-using e_Commerce.Dominio.ModuloItem;
+﻿using e_Commerce.Dominio.ModuloItem;
 
 namespace e_Commerce.Dominio.ModuloProduto
 {
@@ -13,7 +12,7 @@ namespace e_Commerce.Dominio.ModuloProduto
         #endregion
 
         public List<Item> Itens { get; set; }
-        public List<Guid> Id_Carrinhos
+        public List<Guid> Id_Item
         {
             get
             {

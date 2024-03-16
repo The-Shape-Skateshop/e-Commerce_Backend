@@ -1,4 +1,4 @@
-﻿using e_Commerce.Dominio.ModuloCarrinho;
+﻿using e_Commerce.Dominio.ModuloPedido;
 
 namespace e_Commerce.Dominio.ModuloCliente
 {
@@ -7,17 +7,16 @@ namespace e_Commerce.Dominio.ModuloCliente
         #region Atributos que serão mapeados
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public FormaPagamentoEnum TipoPag { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
         #endregion
 
-        public Carrinho Carrinho { get; set; }
-        public Guid Id_Carrinho
+        public List<Pedido> Pedidos { get; set; }
+        public List<Guid> Id_Pedidos
         {
             get
             {
-                return Carrinho.Id;
+                return Pedidos.Select(p => p.Id).ToList<Guid>();
             }
         }
 
@@ -26,18 +25,16 @@ namespace e_Commerce.Dominio.ModuloCliente
 
         }
 
-        public Cliente(string nome, string cpf, FormaPagamentoEnum tipoPag, string email, string telefone, Carrinho carrinho)
+        public Cliente(string nome, string cpf, string email, string telefone, Pedido pedido)
         {
             Nome = nome;
             Cpf = cpf;
-            TipoPag = tipoPag;
             Email = email;
             Telefone = telefone;
-            Carrinho = carrinho;
         }
 
-        public Cliente(Guid id, string nome, string cpf, FormaPagamentoEnum tipoPag, string email, string telefone, Carrinho carrinho) 
-            : this(nome, cpf, tipoPag, email, telefone, carrinho)
+        public Cliente(Guid id, string nome, string cpf, string email, string telefone, Pedido pedido) 
+            : this(nome, cpf, email, telefone, pedido)
         {
             Id = id;
         }
