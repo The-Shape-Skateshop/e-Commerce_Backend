@@ -41,4 +41,3 @@ Para rodar o projeto localmente em sua máquina, siga os passos abaixo:
 
 Este projeto foi desenvolvido por:
  - Ruan Sanchez (https://github.com/MAONEZZE).
- - Raphael de Oliveira (https://github.com/raphaeldeoliveira)
