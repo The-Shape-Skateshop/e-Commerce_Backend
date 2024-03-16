@@ -7,7 +7,7 @@ namespace e_Commerce.Dominio.ModuloItem
     {
         #region Atributos que serão mapeados
         public Pedido Pedido { get; set; }
-        public List<Produto> Produtos { get; set; }
+        public Produto Produto { get; set; }
         public int Qtd_Produto {  get; set; }
         #endregion
 
@@ -17,18 +17,20 @@ namespace e_Commerce.Dominio.ModuloItem
             {
                 return Pedido.Id;
             }
+            set { }
         }
-        public List<Guid> Id_Produtos
+        public Guid Id_Produto
         {
             get
             {
-                return Produtos.Select(p => p.Id).ToList<Guid>();
+                return Produto.Id;
             }
+            set { }
         }
 
         public Item()
         {
-            Produtos = new List<Produto>();
+           
         }
 
         public Item(Pedido pedido, int qtd_Produto) : this()

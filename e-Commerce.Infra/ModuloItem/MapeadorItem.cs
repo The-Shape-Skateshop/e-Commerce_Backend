@@ -11,22 +11,18 @@ namespace e_Commerce.Infra.ModuloItem
             builder.ToTable("Item");
 
             builder.Property(i => i.Id).ValueGeneratedNever();
+           
+            builder.Property(i => i.Qtd_Produto).IsRequired();
 
             builder.HasOne(i => i.Pedido)
                 .WithMany(p => p.Itens).IsRequired()
                 .HasForeignKey(i => i.Id_Pedido)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.Property(i => i.Qtd_Produto).IsRequired();
-
-            builder.HasMany(i => i.Produtos)
-           .WithMany(p => p.Itens)
-           .UsingEntity<Item>(
-                x => x.HasOne(i => i.Produtos)
-                     .WithMany()
-                     .HasForeignKey(i => i.Id_Produtos)
-                     .OnDelete(DeleteBehavior.Cascade));
-
+            builder.HasOne(i => i.Produto)
+                .WithMany(p => p.Itens)
+                .HasForeignKey(i => i.Id_Produto)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

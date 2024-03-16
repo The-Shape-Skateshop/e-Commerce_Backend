@@ -13,19 +13,21 @@ namespace e_Commerce.Dominio.ModuloPedido
         #endregion
 
         public List<Item> Itens { get; set; }
-        public Guid Id_Cliente
-        {
-            get
-            {
-                return Cliente.Id;
-            }
-        }
         public List<Guid> Id_Item
         {
             get
             {
                 return Itens.Select(c => c.Id).ToList<Guid>();
             }
+        }
+
+        public Guid Id_Cliente
+        {
+            get
+            {
+                return Cliente.Id;
+            }
+            set { }
         }
 
         public Pedido()

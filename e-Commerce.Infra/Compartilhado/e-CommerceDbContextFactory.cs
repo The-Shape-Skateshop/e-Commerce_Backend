@@ -7,20 +7,18 @@ namespace e_Commerce.Infra.Compartilhado
     {
         public e_CommerceDbContext CreateDbContext(string[] args)
         {
+            var builder = new DbContextOptionsBuilder<e_CommerceDbContext>();
 
-            var builder = new ConfigurationBuilder()
+            var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
-
-            var config = builder.Build();
+                .AddJsonFile("appsettings.json")
+                .Build();
 
             string connectionString = config.GetConnectionString("PostgreSql");
 
-            var optionsBuilder = new DbContextOptionsBuilder<e_CommerceDbContext>();
+            builder.UseNpgsql(connectionString);
 
-            optionsBuilder.UseNpgsql(connectionString);
-
-            var dbcontext = new e_CommerceDbContext(optionsBuilder.Options);
+            var dbcontext = new e_CommerceDbContext(builder.Options);
 
             var migrador = new MigradorDb();
 

@@ -8,9 +8,10 @@
     "\\e-Commerce.Dominio\\Compartilhado",
     "\\e-Commerce.Dominio\\ModuloProduto",
     "\\e-Commerce.Infra",
+    "\\e-Commerce.Infra\\Compartilhado",
     "\\e-Commerce.Infra\\ModuloCliente",
     "\\e-Commerce.Infra\\ModuloItem"
   ],
-  "SelectedNode": "\\e-Commerce.API\\Config\\TratadoresErros\\ManipuladorExcecoes.cs",
+  "SelectedNode": "\\e-Commerce.Infra\\Compartilhado\\e-CommerceDbContextFactory.cs",
   "PreviewInSolutionExplorer": false
 }
