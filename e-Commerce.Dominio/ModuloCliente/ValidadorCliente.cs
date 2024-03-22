@@ -27,6 +27,10 @@
                 .NotEmpty()
                 .Matches(@"^(\(\d{2}\)\s?\d{5}-\d{4}|\d{10})$")
                 .WithMessage("Telefone inválido. O formato deve ser (99)99999-9999");
+
+            RuleFor(c => c.DataNascimento)
+                .NotNull()
+                .NotEmpty();
         }
     }
 }

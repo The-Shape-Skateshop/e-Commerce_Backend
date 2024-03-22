@@ -26,14 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\Compartilhado\" />
-    <Folder Include="ViewModel\ModuloCliente\" />
-    <Folder Include="ViewModel\ModuloItem\" />
-    <Folder Include="ViewModel\ModuloPedido\" />
-    <Folder Include="ViewModel\ModuloProduto\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\e-Commerce.Dominio\e-Commerce.Dominio.csproj" />
     <ProjectReference Include="..\e-Commerce.Servico\e-Commerce.Servico.csproj" />
   </ItemGroup>

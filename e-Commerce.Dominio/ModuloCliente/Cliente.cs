@@ -9,6 +9,7 @@ namespace e_Commerce.Dominio.ModuloCliente
         public string Cpf { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
+        public DateOnly DataNascimento { get; set; }
         #endregion
 
         public List<Pedido> Pedidos { get; set; }

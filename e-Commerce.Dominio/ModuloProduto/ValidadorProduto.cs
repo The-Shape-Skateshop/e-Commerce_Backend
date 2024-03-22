@@ -24,7 +24,9 @@
                 .NotNull()
                 .NotEmpty();
 
-
+            RuleFor(p => p.Tamanho)
+                .NotNull()
+                .NotEmpty();
         }
     }
 }

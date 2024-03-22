@@ -1,3 +1,4 @@
+using e_Commerce.API.Config.AutomapperConfig.Compartilhado;
 using e_Commerce.API.Config.ExtensionMethods;
 using e_Commerce.API.Config.Filters;
 using e_Commerce.API.Config.TratadoresErros;
@@ -19,7 +20,7 @@ namespace e_Commerce.API
             //=====================================
 
             //============= Mappers ===============
-            //builder.Services.ConfigurarAutoMapper();
+            builder.Services.ConfigurarAutoMapper();
             //=====================================
 
             //============ Extension ==============

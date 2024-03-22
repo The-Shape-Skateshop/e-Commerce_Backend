@@ -9,6 +9,7 @@ namespace e_Commerce.Dominio.ModuloProduto
         public string Descricao { get; set; }
         public string Imagem { get; set; }
         public decimal Valor { get; set; }
+        public string Tamanho { get; set; }
         #endregion
 
         public List<Item> Itens { get; set; }
@@ -33,7 +34,7 @@ namespace e_Commerce.Dominio.ModuloProduto
             Imagem = imagem;
         }
 
-        public Produto(Guid id, string nome, string descricao, decimal valor, int qtdEstoque, string imagem) 
+        public Produto(Guid id, string nome, string descricao, decimal valor, string imagem) 
             : this(nome, descricao, valor, imagem)
         {
             Id = id;

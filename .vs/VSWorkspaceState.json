@@ -12,6 +12,6 @@
     "\\e-Commerce.Infra\\ModuloCliente",
     "\\e-Commerce.Infra\\ModuloItem"
   ],
-  "SelectedNode": "\\e-Commerce.Infra\\Compartilhado\\e-CommerceDbContextFactory.cs",
+  "SelectedNode": "\\e-Commerce.Infra\\ModuloItem\\MapeadorItem.cs",
   "PreviewInSolutionExplorer": false
 }
