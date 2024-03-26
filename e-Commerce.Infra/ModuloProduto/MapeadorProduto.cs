@@ -13,7 +13,7 @@ namespace e_Commerce.Infra.ModuloProduto
             builder.Property(p => p.Nome).HasColumnType("varchar(50)").IsRequired();
             builder.Property(p => p.Descricao).HasColumnType("varchar(200)").IsRequired();
             builder.Property(p => p.Imagem).HasColumnType("varchar(200)").IsRequired();
-            builder.Property(p => p.Valor).HasColumnType("decimal(3, 2)").IsRequired();
+            builder.Property(p => p.Valor).HasColumnType("decimal(6, 2)").IsRequired();
             builder.Property(p => p.Tamanho).HasColumnType("varchar(20)").IsRequired();
         }
     }

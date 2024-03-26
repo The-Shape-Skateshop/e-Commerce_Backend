@@ -4,25 +4,15 @@
     {
         public ValidadorPedido()
         {
-            RuleFor(c => c.Descricao)
-                .NotNull()
-                .NotEmpty()
-                .MinimumLength(5)
-                .WithMessage("Descrição inválida, deve conter no minimo 5 caracteres");
-
-            RuleFor(c => c.Data)
+            RuleFor(p => p.Data)
                 .NotNull()
                 .NotEmpty();
 
-            RuleFor(c => c.ValorTotal)
+            RuleFor(p => p.ValorTotal)
                 .NotNull()
                 .NotEmpty();
 
-            RuleFor(c => c.Cliente)
-                .NotNull()
-                .NotEmpty();
-
-            RuleFor(c => c.Itens)
+            RuleFor(p => p.Cliente)
                 .NotNull()
                 .NotEmpty();
         }

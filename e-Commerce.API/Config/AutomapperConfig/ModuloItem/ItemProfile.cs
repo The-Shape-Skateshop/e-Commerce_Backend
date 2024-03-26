@@ -8,10 +8,11 @@ namespace e_Commerce.API.Config.AutomapperConfig.ModuloItem
         public ItemProfile()
         {
             //CreateMap<O que é, O que vai virar>();
-            //Aqui precisa de um mapping action
+            //Precisa mesmo desse profile?
             CreateMap<Item, ListItemVM>();
             CreateMap<Item, ViewItemVM>();
             CreateMap<FormItemVM, Item>();
+
         }
     }
 }

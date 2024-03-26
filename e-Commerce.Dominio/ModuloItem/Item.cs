@@ -33,13 +33,14 @@ namespace e_Commerce.Dominio.ModuloItem
            
         }
 
-        public Item(Pedido pedido, int qtd_Produto) : this()
+        public Item(Pedido pedido, Produto produto, int qtd_Produto) : this()
         {
             Pedido = pedido;
             Qtd_Produto = qtd_Produto;
+            Produto = produto;
         }
 
-        public Item(Guid id, Pedido pedido, int qtd_Produto) : this(pedido, qtd_Produto)
+        public Item(Guid id, Pedido pedido, Produto produto, int qtd_Produto) : this(pedido, produto, qtd_Produto)
         {
             Id = id;
         }

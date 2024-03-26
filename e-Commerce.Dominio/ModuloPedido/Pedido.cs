@@ -8,12 +8,11 @@ namespace e_Commerce.Dominio.ModuloPedido
         #region Atributos que serão mapeados
         public decimal ValorTotal { get; set; }
         public DateOnly Data { get; set; }
-        public string Descricao { get; set; }
         public Cliente Cliente { get; set; }
         #endregion
 
         public List<Item> Itens { get; set; }
-        public List<Guid> Id_Item
+        public List<Guid> Id_Itens
         {
             get
             {
@@ -35,19 +34,19 @@ namespace e_Commerce.Dominio.ModuloPedido
             Itens = new List<Item>();
         }
 
-        public Pedido(decimal valorTotal, string descricao, Cliente cliente) : this()
+        public Pedido(decimal valorTotal, DateOnly data, Cliente cliente) : this()
         {
             ValorTotal = valorTotal;
-            Descricao = descricao;
             Cliente = cliente;
+            Data = data;
         }
-        public Pedido(Guid id, decimal valorTotal, string descricao, Cliente cliente)
-            : this(valorTotal, descricao, cliente)
+        public Pedido(Guid id, decimal valorTotal, DateOnly data, Cliente cliente)
+            : this(valorTotal, data, cliente)
         {
             Id = id;
         }
 
-        public void AdicionarProdutoNoCarrinho(Item item)
+        public void AdicionarProdutoNoPedido(Item item)
         {
             Itens.Add(item);
         }

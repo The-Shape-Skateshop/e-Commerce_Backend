@@ -13,7 +13,7 @@ namespace e_Commerce.Dominio.ModuloProduto
         #endregion
 
         public List<Item> Itens { get; set; }
-        public List<Guid> Id_Item
+        public List<Guid> Id_Itens
         {
             get
             {

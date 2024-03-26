@@ -14,7 +14,7 @@ namespace e_Commerce.Infra.Compartilhado
             dbSet = dbContext.Set<T>();
         }
 
-        public async Task CriarAsync(T registro)
+        public async Task InserirAsync(T registro)
         {
             await dbSet.AddAsync(registro);
         }

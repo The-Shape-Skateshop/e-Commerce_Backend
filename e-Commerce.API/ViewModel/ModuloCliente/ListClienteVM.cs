@@ -2,6 +2,7 @@
 {
     public class ListClienteVM : ListBase<ListClienteVM>
     {
-        //Não vai ter como listar clientes. Não faria sentido
+        public string Nome { get; set; }
+        public string Email { get; set; }
     }
 }

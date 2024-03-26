@@ -1,17 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e-Commerce.API",
-    "\\e-Commerce.API\\Config",
-    "\\e-Commerce.API\\Config\\TratadoresErros",
     "\\e-Commerce.Dominio",
     "\\e-Commerce.Dominio\\Compartilhado",
+    "\\e-Commerce.Dominio\\ModuloItem",
+    "\\e-Commerce.Dominio\\ModuloPedido",
     "\\e-Commerce.Dominio\\ModuloProduto",
     "\\e-Commerce.Infra",
     "\\e-Commerce.Infra\\Compartilhado",
     "\\e-Commerce.Infra\\ModuloCliente",
     "\\e-Commerce.Infra\\ModuloItem"
   ],
-  "SelectedNode": "\\e-Commerce.Infra\\ModuloItem\\MapeadorItem.cs",
+  "SelectedNode": "\\e-Commerce.Dominio\\ModuloPedido\\ValidadorPedido.cs",
   "PreviewInSolutionExplorer": false
 }

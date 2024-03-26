@@ -12,7 +12,6 @@ namespace e_Commerce.Infra.ModuloPedido
 
             builder.Property(p => p.Id).ValueGeneratedNever();
             builder.Property(p => p.Data).IsRequired();
-            builder.Property(p => p.Descricao).HasColumnType("varchar(200)").IsRequired();
             builder.Property(p => p.ValorTotal).HasColumnType("decimal(4, 2)").IsRequired();
 
             builder.HasOne(p => p.Cliente)

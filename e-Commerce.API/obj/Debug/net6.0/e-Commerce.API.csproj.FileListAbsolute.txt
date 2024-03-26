@@ -1,3 +1,9 @@
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.csproj.AssemblyReference.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.AssemblyInfoInputs.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.AssemblyInfo.cs
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.csproj.CoreCompileInputs.cache
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\appsettings.json
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\e-Commerce.API.exe
@@ -59,13 +65,6 @@ C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Com
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\e-Commerce.Dominio.pdb
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\e-Commerce.Servico.pdb
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\e-Commerce.Infra.pdb
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.csproj.AssemblyReference.cache
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.AssemblyInfoInputs.cache
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.AssemblyInfo.cs
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.csproj.CoreCompileInputs.cache
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\scopedcss\bundle\e-Commerce.API.styles.css

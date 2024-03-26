@@ -7,6 +7,7 @@ namespace e_Commerce.Infra.ModuloPedido
     {
         public RepositorioPedido(IContextoPersistencia ctx) : base(ctx)
         {
+            //TODO fazer o includes do item
         }
     }
 }
