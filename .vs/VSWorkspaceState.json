@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e-Commerce.Dominio",
-    "\\e-Commerce.Dominio\\Compartilhado",
-    "\\e-Commerce.Dominio\\ModuloItem",
-    "\\e-Commerce.Dominio\\ModuloPedido",
-    "\\e-Commerce.Dominio\\ModuloProduto",
+    "\\e-Commerce.API",
+    "\\e-Commerce.API\\Config",
+    "\\e-Commerce.API\\Config\\AutomapperConfig",
+    "\\e-Commerce.API\\Config\\AutomapperConfig\\ModuloPedido",
     "\\e-Commerce.Infra",
     "\\e-Commerce.Infra\\Compartilhado",
     "\\e-Commerce.Infra\\ModuloCliente",
-    "\\e-Commerce.Infra\\ModuloItem"
+    "\\e-Commerce.Infra\\ModuloItem",
+    "\\e-Commerce.Infra\\ModuloProduto"
   ],
-  "SelectedNode": "\\e-Commerce.Dominio\\ModuloPedido\\ValidadorPedido.cs",
+  "SelectedNode": "\\e-Commerce.API\\Config\\AutomapperConfig\\ModuloPedido\\InserirItemMappingAction.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -4,7 +4,7 @@ using e_Commerce.Servico.ModuloCliente;
 
 namespace e_Commerce.API.Controllers.ModuloCliente
 {
-    [Route("api/[controller]")]
+    [Route("api/clientes")]
     [ApiController]
     public class ClienteController : ControladorBase<ListClienteVM, FormClienteVM, ViewClienteVM, Cliente>
     {
@@ -17,10 +17,29 @@ namespace e_Commerce.API.Controllers.ModuloCliente
             this.map = map;
         }
 
-        [ProducesResponseType(typeof(FormClienteVM), 200)]
+        [ProducesResponseType(typeof(ListClienteVM), 200)]
         public override async Task<IActionResult> Inserir(FormClienteVM registroVM)
         {
-            return await base.Inserir(registroVM);
+            Cliente registro = map.Map<Cliente>(registroVM);
+
+            var resultado = await service.InserirAsync(registro);
+
+            if (resultado.IsFailed)
+            {
+                return BadRequest(new
+                {
+                    Sucesso = false,
+                    Errors = resultado.Errors.Select(result => result.Message)
+                });
+            }
+
+            ListClienteVM clienteVM = map.Map<ListClienteVM>(registro);
+
+            return Ok(new
+            {
+                Sucesso = true,
+                Dados = clienteVM
+            });
         }
 
         [ProducesResponseType(typeof(ListClienteVM), 200)]

@@ -17,6 +17,8 @@ namespace e_Commerce.API.Controllers.ModuloProduto
             this.map = map;
         }
 
+        // Fazer endpoint SelecionarPorNome()
+
         [ProducesResponseType(typeof(FormProdutoVM), 200)]
         public override async Task<IActionResult> Inserir(FormProdutoVM registroVM)
         {

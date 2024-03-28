@@ -74,9 +74,9 @@ namespace e_Commerce.Servico.ModuloPedido
 
         public async Task<Result<Pedido>> SelecionarPorIdAsync(Guid id)
         {
-            var Pedido = await repPedido.SelecionarPorIdAsync(id);
+            var pedidos = await repPedido.SelecionarPorIdAsync(id);
 
-            if (Pedido == null)
+            if (pedidos == null)
             {
                 Log.Logger.Warning($"Pedido {id} não encontrado");
 
@@ -85,16 +85,25 @@ namespace e_Commerce.Servico.ModuloPedido
 
             Log.Logger.Information($"Pedido {id} selecionado com sucesso");
 
-            return Result.Ok(Pedido);
+            return Result.Ok(pedidos);
         }
 
         public async Task<Result<List<Pedido>>> SelecionarTodosAsync()
         {
-            var Pedidos = await repPedido.SelecionarTodosAsync();
+            var pedidos = await repPedido.SelecionarTodosAsync();
 
             Log.Logger.Information("Pedidos selecionados com sucesso!");
 
-            return Result.Ok(Pedidos);
+            return Result.Ok(pedidos);
+        }
+
+        public async Task<Result<List<Pedido>>> SelecionarTodosPedidoDoCliente(Guid idCliente)
+        {
+            var pedidos = await repPedido.SelecionarTodosPedidoDoCliente(idCliente);
+
+            Log.Logger.Information($"Pedidos do cliente {idCliente} selecionados com sucesso!");
+
+            return Result.Ok(pedidos);
         }
     }
 }

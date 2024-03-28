@@ -6,13 +6,13 @@ namespace e_Commerce.Dominio.ModuloPedido
     public class Pedido : EntidadeBase<Pedido>
     {
         #region Atributos que serão mapeados
-        public decimal ValorTotal { get; set; }
-        public DateOnly Data { get; set; }
-        public Cliente Cliente { get; set; }
+        public decimal? ValorTotal { get; set; }
+        public DateOnly? Data { get; set; }
+        public Cliente? Cliente { get; set; }
         #endregion
 
-        public List<Item> Itens { get; set; }
-        public List<Guid> Id_Itens
+        public List<Item>? Itens { get; set; }
+        public List<Guid>? Id_Itens
         {
             get
             {
@@ -20,14 +20,7 @@ namespace e_Commerce.Dominio.ModuloPedido
             }
         }
 
-        public Guid Id_Cliente
-        {
-            get
-            {
-                return Cliente.Id;
-            }
-            set { }
-        }
+        public Guid? Id_Cliente { get; set; }
 
         public Pedido()
         {
@@ -40,6 +33,7 @@ namespace e_Commerce.Dominio.ModuloPedido
             Cliente = cliente;
             Data = data;
         }
+
         public Pedido(Guid id, decimal valorTotal, DateOnly data, Cliente cliente)
             : this(valorTotal, data, cliente)
         {

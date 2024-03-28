@@ -18,17 +18,19 @@ namespace e_Commerce.API.Config.AutomapperConfig.ModuloPedido
             this.repProduto = repProduto;
         }
 
-        public void Process(FormPedidoVM pedidoVM, Pedido pedidoObj, ResolutionContext ctx)
+        public void Process(FormPedidoVM pedidoVM, Pedido pedido, ResolutionContext ctx)
         {
+            pedido.Itens.Clear();
+
             var listaItem = pedidoVM.Itens.ToList();
 
             foreach (FormItemVM itemVM in listaItem)
             {
                 Produto produto = repProduto.SelecionarPorIdAsync(itemVM.Id_Produto).Result;
 
-                Item item = new Item(pedidoObj, produto, itemVM.Qtd_Produto);
+                Item item = new Item(pedido, produto, itemVM.Qtd_Produto);
 
-                _ = serviceItem.InserirAsync(item);
+                pedido.AdicionarProdutoNoPedido(item);
             }
         }
     }

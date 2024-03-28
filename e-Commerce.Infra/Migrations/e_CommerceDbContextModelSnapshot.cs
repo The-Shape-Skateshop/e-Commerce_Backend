@@ -86,7 +86,7 @@ namespace eCommerce.Infra.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<decimal>("ValorTotal")
-                        .HasColumnType("decimal(4, 2)");
+                        .HasColumnType("decimal(6, 2)");
 
                     b.HasKey("Id");
 
@@ -117,7 +117,7 @@ namespace eCommerce.Infra.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(3, 2)");
+                        .HasColumnType("decimal(6, 2)");
 
                     b.HasKey("Id");
 

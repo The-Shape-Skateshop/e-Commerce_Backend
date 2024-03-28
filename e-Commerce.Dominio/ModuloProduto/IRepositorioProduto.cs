@@ -2,5 +2,6 @@
 {
     public interface IRepositorioProduto : IRepositorioBase<Produto>
     {
+        public Task<List<Produto>> SelecionarPorNome(string nomeProduto);
     }
 }

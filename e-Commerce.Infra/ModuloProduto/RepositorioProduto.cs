@@ -8,5 +8,10 @@ namespace e_Commerce.Infra.ModuloProduto
         public RepositorioProduto(IContextoPersistencia ctx) : base(ctx)
         {
         }
+
+        public async Task<List<Produto>> SelecionarPorNome(string nomeProduto)
+        {
+            return await dbSet.Where(p => p.Nome.Contains(nomeProduto)).ToListAsync();
+        }
     }
 }

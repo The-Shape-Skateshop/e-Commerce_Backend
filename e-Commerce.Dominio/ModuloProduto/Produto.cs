@@ -5,15 +5,15 @@ namespace e_Commerce.Dominio.ModuloProduto
     public class Produto : EntidadeBase<Produto>
     {
         #region Atributos que serão mapeados
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
-        public string Imagem { get; set; }
-        public decimal Valor { get; set; }
-        public string Tamanho { get; set; }
+        public string? Nome { get; set; }
+        public string? Descricao { get; set; }
+        public string? Imagem { get; set; }
+        public decimal? Valor { get; set; }
+        public string? Tamanho { get; set; }
         #endregion
 
-        public List<Item> Itens { get; set; }
-        public List<Guid> Id_Itens
+        public List<Item>? Itens { get; set; }
+        public List<Guid>? Id_Itens
         {
             get
             {

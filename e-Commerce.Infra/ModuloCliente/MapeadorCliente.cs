@@ -14,6 +14,7 @@ namespace e_Commerce.Infra.ModuloCliente
             builder.Property(c => c.Cpf).HasColumnType("varchar(50)").IsRequired();
             builder.Property(c => c.Email).HasColumnType("varchar(50)").IsRequired();
             builder.Property(c => c.Telefone).HasColumnType("varchar(50)").IsRequired();
+            builder.Property(c => c.Senha).HasColumnType("varchar(50)").IsRequired();
             builder.Property(c => c.DataNascimento).IsRequired();
         }
     }

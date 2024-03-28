@@ -7,7 +7,22 @@ namespace e_Commerce.Infra.ModuloPedido
     {
         public RepositorioPedido(IContextoPersistencia ctx) : base(ctx)
         {
-            //TODO fazer o includes do item
+            //TODO fazer o includes do item no selecionar todos
+        }
+
+        public override async Task<Pedido> SelecionarPorIdAsync(Guid id)
+        {
+            return await dbSet.Where(p => p.Id == id).Include(p => p.Itens).ThenInclude(i => i.Produto).FirstOrDefaultAsync();
+        }
+
+        public override async Task<List<Pedido>> SelecionarTodosAsync()
+        {
+            return await dbSet.Include(p => p.Itens).ThenInclude(i => i.Produto).ToListAsync();
+        }
+        public async Task<List<Pedido>> SelecionarTodosPedidoDoCliente(Guid idCliente)
+        {
+            return await dbSet.Where(p => p.Cliente.Id == idCliente).Include(p => p.Itens).ThenInclude(i => i.Produto).ToListAsync();
         }
     }
 }
+ 

@@ -74,3 +74,4 @@ C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Com
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.pdb
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.genruntimeconfig.cache
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\ref\e-Commerce.API.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.MvcApplicationPartsAssemblyInfo.cs

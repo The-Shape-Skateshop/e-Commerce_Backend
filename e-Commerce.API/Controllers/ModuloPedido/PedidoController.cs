@@ -23,7 +23,33 @@ namespace e_Commerce.API.Controllers.ModuloPedido
             return await base.Inserir(registroVM);
         }
 
+
+        [HttpGet("cliente/{idCliente}")]
         [ProducesResponseType(typeof(ListPedidoVM), 200)]
+        public async Task<IActionResult> SelecionarTodosPedidoDoCliente(Guid idCliente)
+        {
+            var resultado = await service.SelecionarTodosPedidoDoCliente(idCliente);
+
+            if (resultado.IsFailed)
+            {
+                return BadRequest(new
+                {
+                    Sucesso = false,
+                    Errors = resultado.Errors.Select(result => result.Message)
+                });
+            }
+
+            List<ViewPedidoVM> registrosVM = map.Map<List<ViewPedidoVM>>(resultado.Value);
+            //O que está em parenteses será convertido no que está entre <>
+
+            return Ok(new
+            {
+                Sucesso = true,
+                Dados = registrosVM
+            });
+        }
+
+        [ApiExplorerSettings(IgnoreApi = true)]
         public override async Task<IActionResult> SelecionarTodos()
         {
             return await base.SelecionarTodos();

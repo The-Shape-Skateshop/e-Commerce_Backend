@@ -31,6 +31,11 @@
             RuleFor(c => c.DataNascimento)
                 .NotNull()
                 .NotEmpty();
+
+            RuleFor(c => c.Senha)
+                .NotNull()
+                .NotEmpty()
+                .MinimumLength(6);
         }
     }
 }

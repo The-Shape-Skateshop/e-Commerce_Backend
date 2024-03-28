@@ -8,5 +8,6 @@ namespace e_Commerce.Infra.ModuloCliente
         public RepositorioCliente(IContextoPersistencia ctx) : base(ctx)
         {
         }
+
     }
 }

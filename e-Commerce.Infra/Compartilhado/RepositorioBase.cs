@@ -14,17 +14,17 @@ namespace e_Commerce.Infra.Compartilhado
             dbSet = dbContext.Set<T>();
         }
 
-        public async Task InserirAsync(T registro)
+        public virtual async Task InserirAsync(T registro)
         {
             await dbSet.AddAsync(registro);
         }
 
-        public async Task<List<T>> SelecionarTodosAsync()
+        public virtual async Task<List<T>> SelecionarTodosAsync()
         {
             return await dbSet.ToListAsync();
         }
 
-        public async Task<T> SelecionarPorIdAsync(Guid id)
+        public virtual async Task<T> SelecionarPorIdAsync(Guid id)
         {
             return await dbSet.SingleOrDefaultAsync(x => x.Id == id);
         }

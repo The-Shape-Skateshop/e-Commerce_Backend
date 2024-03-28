@@ -6,27 +6,13 @@ namespace e_Commerce.Dominio.ModuloItem
     public class Item : EntidadeBase<Item>
     {
         #region Atributos que serão mapeados
-        public Pedido Pedido { get; set; }
-        public Produto Produto { get; set; }
-        public int Qtd_Produto {  get; set; }
+        public Pedido? Pedido { get; set; }
+        public Produto? Produto { get; set; }
+        public int? Qtd_Produto {  get; set; }
         #endregion
 
-        public Guid Id_Pedido
-        {
-            get
-            {
-                return Pedido.Id;
-            }
-            set { }
-        }
-        public Guid Id_Produto
-        {
-            get
-            {
-                return Produto.Id;
-            }
-            set { }
-        }
+        public Guid? Id_Pedido { get; set; }
+        public Guid? Id_Produto { get; set; }
 
         public Item()
         {

@@ -1,4 +1,5 @@
-﻿using e_Commerce.API.Config.TratadoresErros;
+﻿using e_Commerce.API.Config.AutomapperConfig.ModuloPedido;
+using e_Commerce.API.Config.TratadoresErros;
 using e_Commerce.Dominio.Compartilhado;
 using e_Commerce.Dominio.ModuloCliente;
 using e_Commerce.Dominio.ModuloItem;
@@ -33,6 +34,8 @@ namespace e_Commerce.API.Config.ExtensionMethods
             services.AddTransient<ManipuladorExcecoes>();
 
             services.AddTransient<IRepositorioPedido, RepositorioPedido>();
+            services.AddTransient<InserirClienteMappingAction>();
+            services.AddTransient<InserirItemMappingAction>();
             services.AddTransient<ServicoPedido>();
 
             services.AddTransient<IRepositorioCliente, RepositorioCliente>();
