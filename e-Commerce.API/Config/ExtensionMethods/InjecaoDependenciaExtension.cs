@@ -11,7 +11,6 @@ using e_Commerce.Infra.ModuloItem;
 using e_Commerce.Infra.ModuloPedido;
 using e_Commerce.Infra.ModuloProduto;
 using e_Commerce.Servico.ModuloCliente;
-using e_Commerce.Servico.ModuloItem;
 using e_Commerce.Servico.ModuloPedido;
 using e_Commerce.Servico.ModuloProduto;
 using Microsoft.EntityFrameworkCore;
@@ -45,7 +44,6 @@ namespace e_Commerce.API.Config.ExtensionMethods
             services.AddTransient<ServicoProduto>();
 
             services.AddTransient<IRepositorioItem, RepositorioItem>();
-            services.AddTransient<ServicoItem>();
         }
     }
 }

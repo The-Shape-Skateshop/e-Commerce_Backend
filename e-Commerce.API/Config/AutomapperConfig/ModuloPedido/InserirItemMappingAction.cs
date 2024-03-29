@@ -3,18 +3,15 @@ using e_Commerce.API.ViewModel.ModuloPedido;
 using e_Commerce.Dominio.ModuloItem;
 using e_Commerce.Dominio.ModuloPedido;
 using e_Commerce.Dominio.ModuloProduto;
-using e_Commerce.Servico.ModuloItem;
 
 namespace e_Commerce.API.Config.AutomapperConfig.ModuloPedido
 {
     public class InserirItemMappingAction : IMappingAction<FormPedidoVM, Pedido>
     {
-        readonly ServicoItem serviceItem;
         readonly IRepositorioProduto repProduto;
 
-        public InserirItemMappingAction(ServicoItem serviceItem, IRepositorioProduto repProduto)
+        public InserirItemMappingAction(IRepositorioProduto repProduto)
         {
-            this.serviceItem = serviceItem;
             this.repProduto = repProduto;
         }
 

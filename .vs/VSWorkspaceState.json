@@ -4,12 +4,14 @@
     "\\e-Commerce.API",
     "\\e-Commerce.API\\Config",
     "\\e-Commerce.API\\Config\\AutomapperConfig",
+    "\\e-Commerce.API\\Controllers",
+    "\\e-Commerce.API\\Controllers\\ModuloProduto",
     "\\e-Commerce.Infra",
     "\\e-Commerce.Infra\\Compartilhado",
     "\\e-Commerce.Infra\\ModuloCliente",
     "\\e-Commerce.Infra\\ModuloItem",
     "\\e-Commerce.Infra\\ModuloProduto"
   ],
-  "SelectedNode": "\\e-Commerce.sln",
+  "SelectedNode": "\\e-Commerce.API\\Controllers\\ModuloProduto\\ProdutoController.cs",
   "PreviewInSolutionExplorer": false
 }
