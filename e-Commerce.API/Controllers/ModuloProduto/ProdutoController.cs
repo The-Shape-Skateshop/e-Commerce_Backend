@@ -17,7 +17,31 @@ namespace e_Commerce.API.Controllers.ModuloProduto
             this.map = map;
         }
 
-        // Fazer endpoint SelecionarPorNome()
+        [HttpGet("nome/{nomeProduto}")]
+        [ProducesResponseType(typeof(ListProdutoVM), 200)]
+        [ProducesResponseType(typeof(string[]), 500)]
+        public async Task<IActionResult> SelecionarPorNome(string nomeProduto)
+        {
+            var resultado = await service.SelecionarPorNome(nomeProduto);
+
+            if (resultado.IsFailed)
+            {
+                return BadRequest(new
+                {
+                    Sucesso = false,
+                    Errors = resultado.Errors.Select(result => result.Message)
+                });
+            }
+
+            List<ListProdutoVM> registrosVM = map.Map<List<ListProdutoVM>>(resultado.Value);
+            //O que está em parenteses será convertido no que está entre <>
+
+            return Ok(new
+            {
+                Sucesso = true,
+                Dados = registrosVM
+            });
+        }
 
         [ProducesResponseType(typeof(FormProdutoVM), 200)]
         public override async Task<IActionResult> Inserir(FormProdutoVM registroVM)

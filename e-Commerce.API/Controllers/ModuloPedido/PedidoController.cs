@@ -26,6 +26,7 @@ namespace e_Commerce.API.Controllers.ModuloPedido
 
         [HttpGet("cliente/{idCliente}")]
         [ProducesResponseType(typeof(ListPedidoVM), 200)]
+        [ProducesResponseType(typeof(string[]), 500)]
         public async Task<IActionResult> SelecionarTodosPedidoDoCliente(Guid idCliente)
         {
             var resultado = await service.SelecionarTodosPedidoDoCliente(idCliente);

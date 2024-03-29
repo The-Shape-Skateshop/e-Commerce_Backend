@@ -74,9 +74,9 @@ namespace e_Commerce.Servico.ModuloProduto
 
         public async Task<Result<Produto>> SelecionarPorIdAsync(Guid id)
         {
-            var Produto = await repProduto.SelecionarPorIdAsync(id);
+            var produto = await repProduto.SelecionarPorIdAsync(id);
 
-            if (Produto == null)
+            if (produto == null)
             {
                 Log.Logger.Warning($"Produto {id} não encontrado");
 
@@ -85,16 +85,25 @@ namespace e_Commerce.Servico.ModuloProduto
 
             Log.Logger.Information($"Produto {id} selecionado com sucesso");
 
-            return Result.Ok(Produto);
+            return Result.Ok(produto);
+        }
+
+        public async Task<Result<List<Produto>>> SelecionarPorNome(string nomeProduto)
+        {
+            var produtos = await repProduto.SelecionarPorNome(nomeProduto);
+
+            Log.Logger.Information("Produtos selecionados por nome com sucesso!");
+
+            return Result.Ok(produtos);
         }
 
         public async Task<Result<List<Produto>>> SelecionarTodosAsync()
         {
-            var Produtos = await repProduto.SelecionarTodosAsync();
+            var produtos = await repProduto.SelecionarTodosAsync();
 
             Log.Logger.Information("Produtos selecionados com sucesso!");
 
-            return Result.Ok(Produtos);
+            return Result.Ok(produtos);
         }
     }
 }
