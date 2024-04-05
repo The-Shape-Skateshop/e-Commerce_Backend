@@ -1,5 +1,4 @@
-﻿using e_Commerce.Dominio.Compartilhado;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Results;
 
 namespace e_Commerce.Servico.Compartilhado

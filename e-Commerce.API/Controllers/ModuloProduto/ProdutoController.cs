@@ -18,7 +18,7 @@ namespace e_Commerce.API.Controllers.ModuloProduto
         }
 
         [HttpGet("nome/{nomeProduto}")]
-        [ProducesResponseType(typeof(ListProdutoVM), 200)]
+        [ProducesResponseType(typeof(ListProdutoVM), 200)]//TODO - Tirar a parte de case sensitive ex: fazer Jacket e jacket serem iguais
         [ProducesResponseType(typeof(string[]), 500)]
         public async Task<IActionResult> SelecionarPorNome(string nomeProduto)
         {

@@ -1,5 +1,4 @@
-﻿using e_Commerce.Dominio.ModuloCliente;
-using e_Commerce.Dominio.ModuloItem;
+﻿using e_Commerce.Dominio.ModuloItem;
 
 namespace e_Commerce.Dominio.ModuloPedido
 {
@@ -8,7 +7,8 @@ namespace e_Commerce.Dominio.ModuloPedido
         #region Atributos que serão mapeados
         public decimal? ValorTotal { get; set; }
         public DateOnly? Data { get; set; }
-        public Cliente? Cliente { get; set; }
+        public Usuario Usuario { get; set; }
+        public Guid Id_Usuario { get; set; }
         #endregion
 
         public List<Item>? Itens { get; set; }
@@ -27,15 +27,14 @@ namespace e_Commerce.Dominio.ModuloPedido
             Itens = new List<Item>();
         }
 
-        public Pedido(decimal valorTotal, DateOnly data, Cliente cliente) : this()
+        public Pedido(decimal valorTotal, DateOnly data) : this()
         {
             ValorTotal = valorTotal;
-            Cliente = cliente;
             Data = data;
         }
 
-        public Pedido(Guid id, decimal valorTotal, DateOnly data, Cliente cliente)
-            : this(valorTotal, data, cliente)
+        public Pedido(Guid id, decimal valorTotal, DateOnly data)
+            : this(valorTotal, data)
         {
             Id = id;
         }

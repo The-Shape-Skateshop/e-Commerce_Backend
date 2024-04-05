@@ -1,5 +1,4 @@
 ﻿using e_Commerce.Dominio.ModuloItem;
-using e_Commerce.Dominio.ModuloProduto;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace e_Commerce.Infra.ModuloItem

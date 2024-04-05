@@ -19,10 +19,6 @@ namespace e_Commerce.Infra.ModuloPedido
         {
             return await dbSet.Include(p => p.Itens).ThenInclude(i => i.Produto).ToListAsync();
         }
-        public async Task<List<Pedido>> SelecionarTodosPedidoDoCliente(Guid idCliente)
-        {
-            return await dbSet.Where(p => p.Cliente.Id == idCliente).Include(p => p.Itens).ThenInclude(i => i.Produto).ToListAsync();
-        }
     }
 }
  

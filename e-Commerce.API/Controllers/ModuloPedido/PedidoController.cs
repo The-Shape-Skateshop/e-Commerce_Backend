@@ -24,7 +24,7 @@ namespace e_Commerce.API.Controllers.ModuloPedido
         }
 
 
-        [HttpGet("cliente/{idCliente}")]
+        [HttpGet("cliente/{idCliente}")] //TODO - Deve excluir toda essa lógica de todas as camadas envolvidas
         [ProducesResponseType(typeof(ListPedidoVM), 200)]
         [ProducesResponseType(typeof(string[]), 500)]
         public async Task<IActionResult> SelecionarTodosPedidoDoCliente(Guid idCliente)

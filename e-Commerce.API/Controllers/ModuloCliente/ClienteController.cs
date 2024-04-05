@@ -1,68 +1,50 @@
-﻿using e_Commerce.API.ViewModel.ModuloCliente;
-using e_Commerce.Dominio.ModuloCliente;
-using e_Commerce.Servico.ModuloCliente;
+﻿//using e_Commerce.API.ViewModel.ModuloCliente;
+//using e_Commerce.Dominio.ModuloCliente;
+//using e_Commerce.Servico.ModuloCliente;
 
-namespace e_Commerce.API.Controllers.ModuloCliente
-{
-    [Route("api/clientes")]
-    [ApiController]
-    public class ClienteController : ControladorBase<ListClienteVM, FormClienteVM, ViewClienteVM, Cliente>
-    {
-        readonly ServicoCliente service;
-        readonly IMapper map;
+//namespace e_Commerce.API.Controllers.ModuloCliente
+//{
+//    [Route("api/clientes")]
+//    [ApiController]
+//    public class ClienteController : ControladorBase<ListClienteVM, FormClienteVM, ViewClienteVM, Cliente>
+//    {
+//        readonly ServicoCliente service;
+//        readonly IMapper map;
 
-        public ClienteController(ServicoCliente service, IMapper map) : base(service, map)
-        {
-            this.service = service;
-            this.map = map;
-        }
+//        public ClienteController(ServicoCliente service, IMapper map) : base(service, map)
+//        {
+//            this.service = service;
+//            this.map = map;
+//        }
 
-        [ProducesResponseType(typeof(ListClienteVM), 200)]
-        public override async Task<IActionResult> Inserir(FormClienteVM registroVM)
-        {
-            Cliente registro = map.Map<Cliente>(registroVM);
+//        [ApiExplorerSettings(IgnoreApi = true)] // TODO - Na hora de registrar o usuario, já será cadastrado um cliente com as devidas informações
+//        [ProducesResponseType(typeof(ListClienteVM), 200)]
+//        public override async Task<IActionResult> Inserir(FormClienteVM registroVM)
+//        {
+//            return await base.Inserir(registroVM);
+//        }
 
-            var resultado = await service.InserirAsync(registro);
+//        [ProducesResponseType(typeof(ListClienteVM), 200)]
+//        public override async Task<IActionResult> SelecionarTodos()
+//        {
+//            return await base.SelecionarTodos();
+//        }
 
-            if (resultado.IsFailed)
-            {
-                return BadRequest(new
-                {
-                    Sucesso = false,
-                    Errors = resultado.Errors.Select(result => result.Message)
-                });
-            }
+//        [ProducesResponseType(typeof(ViewClienteVM), 200)]
+//        public override async Task<IActionResult> SelecionarPorId(Guid id)
+//        {
+//            return await base.SelecionarPorId(id);
+//        }
 
-            ListClienteVM clienteVM = map.Map<ListClienteVM>(registro);
+//        [ProducesResponseType(typeof(FormClienteVM), 200)]
+//        public override Task<IActionResult> Editar(Guid id, FormClienteVM registroVM)
+//        {
+//            return base.Editar(id, registroVM);
+//        }
 
-            return Ok(new
-            {
-                Sucesso = true,
-                Dados = clienteVM
-            });
-        }
-
-        [ProducesResponseType(typeof(ListClienteVM), 200)]
-        public override async Task<IActionResult> SelecionarTodos()
-        {
-            return await base.SelecionarTodos();
-        }
-
-        [ProducesResponseType(typeof(ViewClienteVM), 200)]
-        public override async Task<IActionResult> SelecionarPorId(Guid id)
-        {
-            return await base.SelecionarPorId(id);
-        }
-
-        [ProducesResponseType(typeof(FormClienteVM), 200)]
-        public override Task<IActionResult> Editar(Guid id, FormClienteVM registroVM)
-        {
-            return base.Editar(id, registroVM);
-        }
-
-        public override async Task<IActionResult> Deletar(Guid id)
-        {
-            return await base.Deletar(id);
-        }
-    }
-}
+//        public override async Task<IActionResult> Deletar(Guid id)
+//        {
+//            return await base.Deletar(id);
+//        }
+//    }
+//}

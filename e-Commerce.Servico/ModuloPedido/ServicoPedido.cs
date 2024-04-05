@@ -99,11 +99,11 @@ namespace e_Commerce.Servico.ModuloPedido
 
         public async Task<Result<List<Pedido>>> SelecionarTodosPedidoDoCliente(Guid idCliente)
         {
-            var pedidos = await repPedido.SelecionarTodosPedidoDoCliente(idCliente);
+            //var pedidos = await repPedido.SelecionarTodosPedidoDoCliente(idCliente);
 
             Log.Logger.Information($"Pedidos do cliente {idCliente} selecionados com sucesso!");
 
-            return Result.Ok(pedidos);
+            return Result.Ok();
         }
     }
 }

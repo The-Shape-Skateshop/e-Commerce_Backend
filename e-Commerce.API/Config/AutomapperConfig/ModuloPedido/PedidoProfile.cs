@@ -12,7 +12,7 @@ namespace e_Commerce.API.Config.AutomapperConfig.ModuloPedido
             CreateMap<Pedido, ViewPedidoVM>();
 
             CreateMap<FormPedidoVM, Pedido>()
-                .AfterMap<InserirClienteMappingAction>()
+                //.AfterMap<InserirClienteMappingAction>()
                 .AfterMap<InserirItemMappingAction>();
         }
     }
