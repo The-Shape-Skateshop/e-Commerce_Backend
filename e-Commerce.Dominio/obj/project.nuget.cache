@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "GY6J7+5t0KQ3nhDkSM0PxkUN2dyJ77di3lMt5LsaTLFZViXNNlkRJT/TQXDKj3n7EcxlusUyqM+mOT7jVgfxeQ==",
+  "dgSpecHash": "7O9fmw0/z/HkPTolH3cpwzWxQOMfq46UHmyYbhzcks4YGgnxJeZ4YxBynU41k13+3zB0kQzFMUTFWmZ+s+cP+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ruan.souza\\Documents\\Meus_Programas\\e-Commerce\\e-Commerce_Backend\\e-Commerce.Dominio\\e-Commerce.Dominio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ruan.souza\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
     "C:\\Users\\ruan.souza\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
-    "C:\\Users\\ruan.souza\\.nuget\\packages\\sequentialguidgenerator\\1.1.0\\sequentialguidgenerator.1.1.0.nupkg.sha512"
+    "C:\\Users\\ruan.souza\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\ruan.souza\\.nuget\\packages\\sequentialguidgenerator\\1.1.0\\sequentialguidgenerator.1.1.0.nupkg.sha512",
+    "C:\\Users\\ruan.souza\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

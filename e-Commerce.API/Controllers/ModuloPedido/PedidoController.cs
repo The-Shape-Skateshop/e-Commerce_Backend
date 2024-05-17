@@ -1,6 +1,7 @@
 ﻿using e_Commerce.API.ViewModel.ModuloPedido;
 using e_Commerce.Dominio.ModuloPedido;
 using e_Commerce.Servico.ModuloPedido;
+using FluentResults;
 
 namespace e_Commerce.API.Controllers.ModuloPedido
 {
@@ -20,7 +21,33 @@ namespace e_Commerce.API.Controllers.ModuloPedido
         [ProducesResponseType(typeof(FormPedidoVM), 200)]
         public override async Task<IActionResult> Inserir(FormPedidoVM registroVM)
         {
-            return await base.Inserir(registroVM);
+            Result<Pedido> resultado;
+
+            Pedido pedido = map.Map<Pedido>(registroVM);
+
+            resultado = await service.InserirAsync(pedido);
+
+            if (resultado.IsFailed)
+            {
+                return BadRequest(new
+                {
+                    Sucesso = false,
+                    Errors = resultado.Errors.Select(result => result.Message)
+                });
+            }
+
+            resultado = await service.MandarEmail(pedido);
+
+            if (resultado.IsFailed)
+            {
+                return BadRequest(new
+                {
+                    Sucesso = false,
+                    Errors = resultado.Errors.Select(result => result.Message)
+                });
+            }
+
+            return Ok();
         }
 
 

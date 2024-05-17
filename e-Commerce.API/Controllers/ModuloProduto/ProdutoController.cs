@@ -1,6 +1,7 @@
 ﻿using e_Commerce.API.ViewModel.ModuloProduto;
 using e_Commerce.Dominio.ModuloProduto;
 using e_Commerce.Servico.ModuloProduto;
+using System.Globalization;
 
 namespace e_Commerce.API.Controllers.ModuloProduto
 {
@@ -22,7 +23,9 @@ namespace e_Commerce.API.Controllers.ModuloProduto
         [ProducesResponseType(typeof(string[]), 500)]
         public async Task<IActionResult> SelecionarPorNome(string nomeProduto)
         {
-            var resultado = await service.SelecionarPorNome(nomeProduto);
+            var texto = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nomeProduto);
+
+            var resultado = await service.SelecionarPorNome(texto);
 
             if (resultado.IsFailed)
             {

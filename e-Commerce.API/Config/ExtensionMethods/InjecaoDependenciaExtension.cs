@@ -7,6 +7,7 @@ using e_Commerce.Dominio.ModuloPedido;
 using e_Commerce.Dominio.ModuloProduto;
 using e_Commerce.Infra.Compartilhado;
 using e_Commerce.Infra.ModuloCliente;
+using e_Commerce.Infra.ModuloEmail;
 using e_Commerce.Infra.ModuloItem;
 using e_Commerce.Infra.ModuloPedido;
 using e_Commerce.Infra.ModuloProduto;
@@ -30,6 +31,8 @@ namespace e_Commerce.API.Config.ExtensionMethods
 
             //Registrando esse contexto com a interface IContextoPersistencia
             //Em outros lugares do código, pode injetar IContextoPersistencia e obter uma instância de e_CommerceDbContext
+            services.AddTransient<IGeradorEmail, GeradorEmail>();
+            services.AddTransient<IGeradorPDF, GeradorPDF>();
             services.AddTransient<ManipuladorExcecoes>();
 
             services.AddTransient<IRepositorioPedido, RepositorioPedido>();
