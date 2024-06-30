@@ -22,6 +22,11 @@ namespace e_Commerce.Infra.ModuloItem
                 .WithMany(p => p.Itens)
                 .HasForeignKey(i => i.Id_Produto)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(p => p.Usuario)
+                .WithMany()
+                .IsRequired()
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

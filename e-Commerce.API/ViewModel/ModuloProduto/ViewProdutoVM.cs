@@ -1,6 +1,4 @@
-﻿using e_Commerce.Dominio.ModuloProduto;
-
-namespace e_Commerce.API.ViewModel.ModuloProduto
+﻿namespace e_Commerce.API.ViewModel.ModuloProduto
 {
     public class ViewProdutoVM : ViewBase<ViewProdutoVM>
     {

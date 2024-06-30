@@ -1,6 +1,4 @@
-﻿using e_Commerce.Dominio.Compartilhado;
-
-namespace e_Commerce.Servico.Compartilhado
+﻿namespace e_Commerce.Servico.Compartilhado
 {
     public interface IServicoBase<T> 
         where T : EntidadeBase<T>

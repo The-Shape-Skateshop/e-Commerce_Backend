@@ -2,9 +2,11 @@
 using e_Commerce.Dominio.ModuloPedido;
 using e_Commerce.Servico.ModuloPedido;
 using FluentResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace e_Commerce.API.Controllers.ModuloPedido
 {
+    [Authorize]
     [Route("api/pedidos")]
     [ApiController]
     public class PedidoController : ControladorBase<ListPedidoVM, FormPedidoVM, ViewPedidoVM, Pedido>
@@ -50,34 +52,6 @@ namespace e_Commerce.API.Controllers.ModuloPedido
             return Ok();
         }
 
-
-        [HttpGet("cliente/{idCliente}")]
-        [ProducesResponseType(typeof(ListPedidoVM), 200)]
-        [ProducesResponseType(typeof(string[]), 500)]
-        public async Task<IActionResult> SelecionarTodosPedidoDoCliente(Guid idCliente)
-        {
-            var resultado = await service.SelecionarTodosPedidoDoCliente(idCliente);
-
-            if (resultado.IsFailed)
-            {
-                return BadRequest(new
-                {
-                    Sucesso = false,
-                    Errors = resultado.Errors.Select(result => result.Message)
-                });
-            }
-
-            List<ViewPedidoVM> registrosVM = map.Map<List<ViewPedidoVM>>(resultado.Value);
-            //O que está em parenteses será convertido no que está entre <>
-
-            return Ok(new
-            {
-                Sucesso = true,
-                Dados = registrosVM
-            });
-        }
-
-        [ApiExplorerSettings(IgnoreApi = true)]
         public override async Task<IActionResult> SelecionarTodos()
         {
             return await base.SelecionarTodos();
@@ -89,6 +63,7 @@ namespace e_Commerce.API.Controllers.ModuloPedido
             return await base.SelecionarPorId(id);
         }
 
+        [ApiExplorerSettings(IgnoreApi = true)]
         [ProducesResponseType(typeof(FormPedidoVM), 200)]
         public override Task<IActionResult> Editar(Guid id, FormPedidoVM registroVM)
         {

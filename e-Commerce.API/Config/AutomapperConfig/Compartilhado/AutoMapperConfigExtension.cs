@@ -1,4 +1,4 @@
-﻿using e_Commerce.API.Config.AutomapperConfig.ModuloCliente;
+﻿using e_Commerce.API.Config.AutomapperConfig.ModuloAuth;
 using e_Commerce.API.Config.AutomapperConfig.ModuloItem;
 using e_Commerce.API.Config.AutomapperConfig.ModuloPedido;
 using e_Commerce.API.Config.AutomapperConfig.ModuloProduto;
@@ -11,10 +11,10 @@ namespace e_Commerce.API.Config.AutomapperConfig.Compartilhado
         {
             service.AddAutoMapper(opt =>
             {
-                opt.AddProfile<ClienteProfile>();
                 opt.AddProfile<ItemProfile>();
                 opt.AddProfile<ProdutoProfile>();
                 opt.AddProfile<PedidoProfile>();
+                opt.AddProfile<UsuarioProfile>();
             });
         }
     }

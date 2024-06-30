@@ -1,11 +1,9 @@
-﻿using e_Commerce.Dominio.Compartilhado;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Results;
 
 namespace e_Commerce.Servico.Compartilhado
 {
     public class ServicoBase<TEntity, TValidator>
-        where TEntity : EntidadeBase<TEntity>
         where TValidator : AbstractValidator<TEntity>, new()
     {
         protected virtual Result Validar(TEntity registro)

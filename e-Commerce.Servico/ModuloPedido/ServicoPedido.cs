@@ -74,7 +74,7 @@ namespace e_Commerce.Servico.ModuloPedido
 
             Log.Logger.Information($"Pedido {registro.Id} inserido com sucesso");
 
-            Log.Logger.Information($"Enviando email ao {registro.Cliente.Nome}...");
+            Log.Logger.Information($"Enviando email ao {registro.Usuario.Nome}...");
 
 
 
@@ -84,7 +84,7 @@ namespace e_Commerce.Servico.ModuloPedido
 
         public async Task<Result<Pedido>> MandarEmail(Pedido registro)
         {
-            Log.Logger.Information($"Enviando email ao {registro.Cliente.Nome}...");
+            Log.Logger.Information($"Enviando email ao {registro.Usuario.Nome}...");
 
             var anexo = geradorPdf.GerarPdfEmail(registro);
 
@@ -138,15 +138,6 @@ namespace e_Commerce.Servico.ModuloPedido
             var pedidos = await repPedido.SelecionarTodosAsync();
 
             Log.Logger.Information("Pedidos selecionados com sucesso!");
-
-            return Result.Ok(pedidos);
-        }
-
-        public async Task<Result<List<Pedido>>> SelecionarTodosPedidoDoCliente(Guid idCliente)
-        {
-            var pedidos = await repPedido.SelecionarTodosPedidoDoCliente(idCliente);
-
-            Log.Logger.Information($"Pedidos do cliente {idCliente} selecionados com sucesso!");
 
             return Result.Ok(pedidos);
         }

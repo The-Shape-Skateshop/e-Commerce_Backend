@@ -12,9 +12,9 @@
                 .NotNull()
                 .NotEmpty();
 
-            RuleFor(p => p.Cliente)
-                .NotNull()
-                .NotEmpty();
+            //RuleFor(p => p.Cliente)
+            //    .NotNull()
+            //    .NotEmpty();
         }
     }
 }

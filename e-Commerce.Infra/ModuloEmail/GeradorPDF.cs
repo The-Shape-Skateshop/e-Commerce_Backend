@@ -1,7 +1,13 @@
 ﻿using e_Commerce.Dominio.ModuloPedido;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.text.pdf.draw;
+using iText.Kernel.Font;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas.Draw;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System;
+using System.IO;
 using System.Text;
 
 namespace e_Commerce.Infra.ModuloEmail
@@ -12,78 +18,76 @@ namespace e_Commerce.Infra.ModuloEmail
         {
             var message = GerarCorpoPdf(pedido);
 
-            var document = new Document();
-
-            using var memoryStream = new MemoryStream();
-
-            try
+            using (var memoryStream = new MemoryStream())
             {
-                PdfWriter.GetInstance(document, memoryStream);
-
-                document.Open();
-
-                string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logocerto.png");
-
-                Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory);
-
-                if (File.Exists(imagePath))
+                try
                 {
-                    Image imagem = Image.GetInstance(imagePath);
-                    imagem.ScaleAbsolute(180f, 80f);
-                    imagem.SetAbsolutePosition(390f, PageSize.A4.Height - 90f);
+                    var writer = new PdfWriter(memoryStream);
+                    var pdf = new PdfDocument(writer);
+                    var document = new Document(pdf);
 
-                    document.Add(imagem);
+                    string imagePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logocerto.png");
+
+                    if (File.Exists(imagePath))
+                    {
+                        var logo = new iText.Layout.Element.Image(iText.IO.Image.ImageDataFactory.Create(imagePath));
+                        logo.ScaleAbsolute(180f, 80f);
+                        logo.SetFixedPosition(390f, PageSize.A4.GetHeight() - 90f);
+
+                        document.Add(logo);
+                    }
+
+                    document.Add(new Paragraph());
+
+                    var titulo = new Paragraph("Detalhes do Pedido")
+                                    .SetFont(PdfFontFactory.CreateFont("Times-Roman"))
+                                    .SetFontSize(14)
+                                    .SetBold()
+                                    .SetMarginBottom(20f);
+
+                    document.Add(titulo);
+
+                    var estiloCorpo = PdfFontFactory.CreateFont("Times-Roman");
+                    var paragraph = new Paragraph(message)
+                                        .SetFont(estiloCorpo)
+                                        .SetFontSize(12)
+                                        .SetFontColor(iText.Kernel.Colors.ColorConstants.DARK_GRAY);
+
+                    document.Add(paragraph);
+
+                    var linha = new LineSeparator(new SolidLine(0.5f));
+                    document.Add(linha);
+
+                    var dataCriacao = new Paragraph($"Data de Criação: {DateTime.Now}")
+                                            .SetFont(PdfFontFactory.CreateFont("Times-Roman"))
+                                            .SetFontSize(10)
+                                            .SetItalic()
+                                            .SetTextAlignment(TextAlignment.RIGHT)
+                                            .SetMarginTop(20f);
+
+                    document.Add(dataCriacao);
+
+                    document.Close();
+
+                    return memoryStream.ToArray();
                 }
-
-                document.Add(new Paragraph());
-
-                var titulo = new Paragraph("Detalhes do Pedido", new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.BOLD))
+                catch
                 {
-                    SpacingBefore = 10f,
-                    SpacingAfter = 20f
-                };
-                document.Add(titulo);
-
-                var estiloCorpo = new Font(Font.FontFamily.TIMES_ROMAN, 12);
-                estiloCorpo.Color = BaseColor.DARK_GRAY;
-
-                var paragraph = new Paragraph(message, estiloCorpo);
-                document.Add(paragraph);
-
-                var linha = new Chunk(new LineSeparator(0.5f, 100f, BaseColor.BLACK, Element.ALIGN_CENTER, -2));
-                document.Add(linha);
-
-                var dataCriacao = new Paragraph($"Data de Criação: {DateTime.Now}", new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.ITALIC))
-                {
-                    SpacingBefore = 20f,
-                    Alignment = Element.ALIGN_RIGHT
-                };
-                document.Add(dataCriacao);
-
-                document.Close();
-
-                return memoryStream.ToArray();
-            }
-            catch
-            {
-                return null!;
+                    return null;
+                }
             }
         }
 
-
         private static string GerarCorpoPdf(Pedido pedido)
         {
-            var i = 0;
             var sb = new StringBuilder();
-
-            sb.AppendLine($"Cliente: {pedido.Cliente.Nome}");
+            sb.AppendLine($"Cliente: {pedido.Usuario.Nome}");
             sb.AppendLine($"ID do Pedido: {pedido.Id}");
             sb.AppendLine();
             sb.AppendLine("---- Itens do Pedido ----");
-            foreach(var item in pedido.Itens)
+            foreach (var item in pedido.Itens)
             {
-                sb.AppendLine($"{i + 1} - R$ {item.Produto.Valor} : {item.Produto.Nome}");
-                i++;
+                sb.AppendLine($"{item.Produto.Nome} - R$ {item.Produto.Valor}");
             }
             sb.AppendLine();
             sb.AppendLine("--- Total ---");

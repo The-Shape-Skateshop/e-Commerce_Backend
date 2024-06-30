@@ -1,6 +1,4 @@
-﻿using e_Commerce.API.ViewModel.ModuloCliente;
-using e_Commerce.API.ViewModel.ModuloItem;
-using e_Commerce.Dominio.ModuloPedido;
+﻿using e_Commerce.API.ViewModel.ModuloItem;
 
 namespace e_Commerce.API.ViewModel.ModuloPedido
 {

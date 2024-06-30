@@ -20,7 +20,6 @@ C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Com
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -39,7 +38,6 @@ C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Com
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Mono.TextTemplating.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Npgsql.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\SequentialGuidGenerator.dll
@@ -55,7 +53,6 @@ C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Com
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
@@ -75,3 +72,9 @@ C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Com
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.genruntimeconfig.cache
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\ref\e-Commerce.API.dll
 C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\obj\Debug\net6.0\e-Commerce.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ruan.souza\Documents\Meus_Programas\e-Commerce\e-Commerce_Backend\e-Commerce.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll

@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[11.8.0, )"
             },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.22, )"
+            },
             "SequentialGuidGenerator": {
               "target": "Package",
               "version": "[1.1.0, )"

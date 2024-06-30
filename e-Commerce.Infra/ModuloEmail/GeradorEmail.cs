@@ -17,7 +17,7 @@ namespace e_Commerce.Infra.ModuloEmail
 
             emailMessage.From = new MailAddress(ValidarEmail(emailRemetente));
 
-            emailMessage.To.Add(new MailAddress(ValidarEmail(pedido.Cliente.Email)));
+            emailMessage.To.Add(new MailAddress(ValidarEmail(pedido.Usuario.Email)));
 
             emailMessage.Subject = $"Detalhes do pedido: {pedido.Id}";
 

@@ -1,9 +1,6 @@
-﻿using AutoMapper;
-using e_Commerce.Dominio.Compartilhado;
+﻿using e_Commerce.Dominio.Compartilhado;
 using e_Commerce.Servico.Compartilhado;
 using FluentResults;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
 namespace e_Commerce.API.Controllers.Compartilhado
 {
