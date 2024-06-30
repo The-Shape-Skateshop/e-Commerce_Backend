@@ -4,7 +4,7 @@ O The Shape Skateshop é um e-commerce especializado na venda de peças, roupas 
 
 ## Funcionalidades
 
-### Para Administradores
+### Para Administradores (Em manutenção)
 - Cadastro, edição e exclusão de produtos.
 - Visualização detalhada de produtos cadastrados.
 - Aplicação de descontos especiais em produtos.

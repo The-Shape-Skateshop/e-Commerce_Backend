@@ -9,12 +9,11 @@ namespace e_Commerce.Dominio.ModuloAuth
         public string? Cpf { get; set; }
         public string? Telefone { get; set; }
         public DateOnly DataNascimento { get; set; }
-        //public string? Email { get; set; } -> UserName
-        //public string? Senha { get; set; } -> Password
+        public string? Senha { get; set; }
+
         public Usuario()
         {
             Id = SequentialGuid.NewGuid();
-            
         }
     }
 }

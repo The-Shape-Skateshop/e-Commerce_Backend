@@ -19,13 +19,19 @@ namespace e_Commerce.API
             builder.Services.ConfigurarSerilog(builder.Logging);
             //=====================================
 
+            //============ Extension ==============
+            builder.Services.ConfigurarSwaggerExtension();
+            builder.Services.ConfigurarInjecaoDependencia(builder.Configuration);
+
+            builder.Services.ConfigurarIdentity();
+            //=====================================
+
             //============= Mappers ===============
             builder.Services.ConfigurarAutoMapper();
             //=====================================
 
-            //============ Extension ==============
-            builder.Services.ConfigurarSwaggerExtension();
-            builder.Services.ConfigurarInjecaoDependencia(builder.Configuration);
+            //======= Autenticação Config ========= 
+            builder.Services.ConfigurarValidacaoToken(); //configuração do middleware que ira validar o token, a partir de qualquer request
             //=====================================
 
             //== Controllers, Filtros e Exceções ==
@@ -48,6 +54,8 @@ namespace e_Commerce.API
             app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

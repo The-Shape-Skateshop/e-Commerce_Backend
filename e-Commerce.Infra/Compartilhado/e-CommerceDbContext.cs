@@ -1,5 +1,7 @@
 ﻿using e_Commerce.Dominio.Compartilhado;
 using e_Commerce.Dominio.ModuloAuth;
+using e_Commerce.Dominio.ModuloItem;
+using e_Commerce.Dominio.ModuloPedido;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -10,9 +12,13 @@ namespace e_Commerce.Infra.Compartilhado
 {
     public class e_CommerceDbContext : IdentityDbContext<Usuario, IdentityRole<Guid>, Guid>, IContextoPersistencia
     {
-        public e_CommerceDbContext(DbContextOptions options) : base(options)
+        private Guid usuario_id;
+        public e_CommerceDbContext(DbContextOptions options, ITenantProvider tenantProvider = null) : base(options)
         {
-
+            if (tenantProvider != null)
+            {
+                this.usuario_id = tenantProvider.Usuario_id;
+            }
         }
 
         public async Task GravarDadosAsync()
@@ -37,7 +43,8 @@ namespace e_Commerce.Infra.Compartilhado
             Assembly binario = typeof(e_CommerceDbContext).Assembly;
             modelBuilder.ApplyConfigurationsFromAssembly(binario);
 
-            
+            modelBuilder.Entity<Pedido>().HasQueryFilter(x => x.UsuarioId == usuario_id);
+            modelBuilder.Entity<Item>().HasQueryFilter(x => x.UsuarioId == usuario_id);
 
             base.OnModelCreating(modelBuilder);
         }

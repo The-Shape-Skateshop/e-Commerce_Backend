@@ -12,8 +12,8 @@ using e_Commerce.Infra.Compartilhado;
 namespace e_Commerce.Infra.Migrations
 {
     [DbContext(typeof(e_CommerceDbContext))]
-    [Migration("20240405121303_TabelasIdentity")]
-    partial class TabelasIdentity
+    [Migration("20240630222059_TodasTabelasComIdentity")]
+    partial class TodasTabelasComIdentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -79,6 +79,9 @@ namespace e_Commerce.Infra.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text");
 
+                    b.Property<string>("Senha")
+                        .HasColumnType("text");
+
                     b.Property<string>("Telefone")
                         .HasColumnType("text");
 
@@ -116,11 +119,16 @@ namespace e_Commerce.Infra.Migrations
                         .IsRequired()
                         .HasColumnType("integer");
 
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Id_Pedido");
 
                     b.HasIndex("Id_Produto");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Item", (string)null);
                 });
@@ -135,9 +143,6 @@ namespace e_Commerce.Infra.Migrations
                         .HasColumnType("date");
 
                     b.Property<Guid?>("Id_Cliente")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("Id_Usuario")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("UsuarioId")
@@ -327,9 +332,17 @@ namespace e_Commerce.Infra.Migrations
                         .HasForeignKey("Id_Produto")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("e_Commerce.Dominio.ModuloAuth.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("Pedido");
 
                     b.Navigation("Produto");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("e_Commerce.Dominio.ModuloPedido.Pedido", b =>

@@ -9,6 +9,8 @@ namespace e_Commerce.Dominio.ModuloItem
         public Pedido? Pedido { get; set; }
         public Produto? Produto { get; set; }
         public int? Qtd_Produto {  get; set; }
+        public Usuario Usuario { get; set; }
+        public Guid UsuarioId { get; set; }
         #endregion
 
         public Guid? Id_Pedido { get; set; }

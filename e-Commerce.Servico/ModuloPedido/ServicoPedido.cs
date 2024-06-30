@@ -6,11 +6,16 @@ namespace e_Commerce.Servico.ModuloPedido
     {
         readonly IRepositorioPedido repPedido;
         readonly IContextoPersistencia ctxPersistencia;
+        readonly IGeradorPDF geradorPdf;
+        readonly IGeradorEmail geradorEmail;
 
-        public ServicoPedido(IRepositorioPedido repPedido, IContextoPersistencia ctxPersistencia)
+
+        public ServicoPedido(IRepositorioPedido repPedido, IContextoPersistencia ctxPersistencia, IGeradorPDF geradorPdf, IGeradorEmail geradorEmail)
         {
             this.repPedido = repPedido;
             this.ctxPersistencia = ctxPersistencia;
+            this.geradorPdf = geradorPdf;
+            this.geradorEmail = geradorEmail;
         }
 
         public async Task<Result<Pedido>> EditarAsync(Pedido registro)
@@ -69,7 +74,47 @@ namespace e_Commerce.Servico.ModuloPedido
 
             Log.Logger.Information($"Pedido {registro.Id} inserido com sucesso");
 
+            Log.Logger.Information($"Enviando email ao {registro.Usuario.Nome}...");
+
+
+
+
             return Result.Ok(registro);
+        }
+
+        public async Task<Result<Pedido>> MandarEmail(Pedido registro)
+        {
+            Log.Logger.Information($"Enviando email ao {registro.Usuario.Nome}...");
+
+            var anexo = geradorPdf.GerarPdfEmail(registro);
+
+            string msg;
+
+            if (anexo == null)
+            {
+                msg = "Falha ao gerar PDF";
+
+                Log.Error(msg);
+
+                return Result.Fail(msg);
+            }
+
+            var statusEnvio = geradorEmail.EnviarEmail(registro, anexo);
+
+            if (statusEnvio.IsFailed)
+            {
+                msg = "Falha ao tentar enviar email";
+
+                Log.Error(msg + " {aluguel}", registro);
+
+                return Result.Fail(statusEnvio.Reasons.Select(i => i.Message));
+            }
+
+            msg = "Email enviado com sucesso";
+
+            Log.Debug(msg + " {Pedido}", registro);
+
+            return Result.Ok();
         }
 
         public async Task<Result<Pedido>> SelecionarPorIdAsync(Guid id)
@@ -95,15 +140,6 @@ namespace e_Commerce.Servico.ModuloPedido
             Log.Logger.Information("Pedidos selecionados com sucesso!");
 
             return Result.Ok(pedidos);
-        }
-
-        public async Task<Result<List<Pedido>>> SelecionarTodosPedidoDoCliente(Guid idCliente)
-        {
-            //var pedidos = await repPedido.SelecionarTodosPedidoDoCliente(idCliente);
-
-            Log.Logger.Information($"Pedidos do cliente {idCliente} selecionados com sucesso!");
-
-            return Result.Ok();
         }
     }
 }

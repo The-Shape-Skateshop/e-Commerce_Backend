@@ -8,7 +8,7 @@ namespace e_Commerce.Dominio.ModuloPedido
         public decimal? ValorTotal { get; set; }
         public DateOnly? Data { get; set; }
         public Usuario Usuario { get; set; }
-        public Guid Id_Usuario { get; set; }
+        public Guid UsuarioId { get; set; }
         #endregion
 
         public List<Item>? Itens { get; set; }

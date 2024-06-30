@@ -1,9 +1,12 @@
 ﻿using e_Commerce.API.ViewModel.ModuloPedido;
 using e_Commerce.Dominio.ModuloPedido;
 using e_Commerce.Servico.ModuloPedido;
+using FluentResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace e_Commerce.API.Controllers.ModuloPedido
 {
+    [Authorize]
     [Route("api/pedidos")]
     [ApiController]
     public class PedidoController : ControladorBase<ListPedidoVM, FormPedidoVM, ViewPedidoVM, Pedido>
@@ -20,16 +23,11 @@ namespace e_Commerce.API.Controllers.ModuloPedido
         [ProducesResponseType(typeof(FormPedidoVM), 200)]
         public override async Task<IActionResult> Inserir(FormPedidoVM registroVM)
         {
-            return await base.Inserir(registroVM);
-        }
+            Result<Pedido> resultado;
 
+            Pedido pedido = map.Map<Pedido>(registroVM);
 
-        [HttpGet("cliente/{idCliente}")] //TODO - Deve excluir toda essa lógica de todas as camadas envolvidas
-        [ProducesResponseType(typeof(ListPedidoVM), 200)]
-        [ProducesResponseType(typeof(string[]), 500)]
-        public async Task<IActionResult> SelecionarTodosPedidoDoCliente(Guid idCliente)
-        {
-            var resultado = await service.SelecionarTodosPedidoDoCliente(idCliente);
+            resultado = await service.InserirAsync(pedido);
 
             if (resultado.IsFailed)
             {
@@ -40,17 +38,20 @@ namespace e_Commerce.API.Controllers.ModuloPedido
                 });
             }
 
-            List<ViewPedidoVM> registrosVM = map.Map<List<ViewPedidoVM>>(resultado.Value);
-            //O que está em parenteses será convertido no que está entre <>
+            resultado = await service.MandarEmail(pedido);
 
-            return Ok(new
+            if (resultado.IsFailed)
             {
-                Sucesso = true,
-                Dados = registrosVM
-            });
+                return BadRequest(new
+                {
+                    Sucesso = false,
+                    Errors = resultado.Errors.Select(result => result.Message)
+                });
+            }
+
+            return Ok();
         }
 
-        [ApiExplorerSettings(IgnoreApi = true)]
         public override async Task<IActionResult> SelecionarTodos()
         {
             return await base.SelecionarTodos();
@@ -62,6 +63,7 @@ namespace e_Commerce.API.Controllers.ModuloPedido
             return await base.SelecionarPorId(id);
         }
 
+        [ApiExplorerSettings(IgnoreApi = true)]
         [ProducesResponseType(typeof(FormPedidoVM), 200)]
         public override Task<IActionResult> Editar(Guid id, FormPedidoVM registroVM)
         {

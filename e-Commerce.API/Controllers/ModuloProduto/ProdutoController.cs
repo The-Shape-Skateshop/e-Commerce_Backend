@@ -1,9 +1,12 @@
 ﻿using e_Commerce.API.ViewModel.ModuloProduto;
 using e_Commerce.Dominio.ModuloProduto;
 using e_Commerce.Servico.ModuloProduto;
+using Microsoft.AspNetCore.Authorization;
+using System.Globalization;
 
 namespace e_Commerce.API.Controllers.ModuloProduto
 {
+    [Authorize]
     [Route("api/produtos")]
     [ApiController]
     public class ProdutoController : ControladorBase<ListProdutoVM, FormProdutoVM, ViewProdutoVM, Produto>
@@ -18,11 +21,13 @@ namespace e_Commerce.API.Controllers.ModuloProduto
         }
 
         [HttpGet("nome/{nomeProduto}")]
-        [ProducesResponseType(typeof(ListProdutoVM), 200)]//TODO - Tirar a parte de case sensitive ex: fazer Jacket e jacket serem iguais
+        [ProducesResponseType(typeof(ListProdutoVM), 200)]
         [ProducesResponseType(typeof(string[]), 500)]
         public async Task<IActionResult> SelecionarPorNome(string nomeProduto)
         {
-            var resultado = await service.SelecionarPorNome(nomeProduto);
+            var texto = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nomeProduto);
+
+            var resultado = await service.SelecionarPorNome(texto);
 
             if (resultado.IsFailed)
             {

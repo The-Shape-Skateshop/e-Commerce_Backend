@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace e_Commerce.Infra.Migrations
 {
-    public partial class TabelasIdentity : Migration
+    public partial class TodasTabelasComIdentity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,6 +33,7 @@ namespace e_Commerce.Infra.Migrations
                     Cpf = table.Column<string>(type: "text", nullable: true),
                     Telefone = table.Column<string>(type: "text", nullable: true),
                     DataNascimento = table.Column<DateOnly>(type: "date", nullable: false),
+                    Senha = table.Column<string>(type: "text", nullable: true),
                     UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
@@ -183,7 +184,6 @@ namespace e_Commerce.Infra.Migrations
                     ValorTotal = table.Column<decimal>(type: "numeric(6,2)", nullable: false),
                     Data = table.Column<DateOnly>(type: "date", nullable: false),
                     UsuarioId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Id_Usuario = table.Column<Guid>(type: "uuid", nullable: false),
                     Id_Cliente = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
@@ -202,12 +202,18 @@ namespace e_Commerce.Infra.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Qtd_Produto = table.Column<int>(type: "integer", nullable: false),
+                    UsuarioId = table.Column<Guid>(type: "uuid", nullable: false),
                     Id_Pedido = table.Column<Guid>(type: "uuid", nullable: true),
                     Id_Produto = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Item", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Item_AspNetUsers_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Item_Pedido_Id_Pedido",
                         column: x => x.Id_Pedido,
@@ -268,6 +274,11 @@ namespace e_Commerce.Infra.Migrations
                 name: "IX_Item_Id_Produto",
                 table: "Item",
                 column: "Id_Produto");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Item_UsuarioId",
+                table: "Item",
+                column: "UsuarioId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedido_UsuarioId",
