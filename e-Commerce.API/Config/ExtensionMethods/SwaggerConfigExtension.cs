@@ -10,7 +10,7 @@ namespace e_Commerce.API.Config.ExtensionMethods
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(x =>
             {
-                x.SwaggerDoc("v1", new OpenApiInfo { Title = "eAgendaMedica.WebApi", Version = "v1" });
+                x.SwaggerDoc("v1", new OpenApiInfo { Title = "e-Commerce-API", Version = "v1" });
 
                 x.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
