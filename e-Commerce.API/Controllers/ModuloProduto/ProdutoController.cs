@@ -6,7 +6,6 @@ using System.Globalization;
 
 namespace e_Commerce.API.Controllers.ModuloProduto
 {
-    [Authorize]
     [Route("api/produtos")]
     [ApiController]
     public class ProdutoController : ControladorBase<ListProdutoVM, FormProdutoVM, ViewProdutoVM, Produto>
