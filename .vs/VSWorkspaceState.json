@@ -2,15 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\e-Commerce.API",
+    "\\e-Commerce.API\\Config",
+    "\\e-Commerce.API\\Config\\ExtensionMethods",
     "\\e-Commerce.API\\Controllers",
-    "\\e-Commerce.API\\Controllers\\ModuloProduto",
-    "\\e-Commerce.Dominio",
-    "\\e-Commerce.Dominio\\ModuloAuth",
+    "\\e-Commerce.API\\Controllers\\ModuloAuth",
     "\\e-Commerce.Infra",
-    "\\e-Commerce.Infra\\Compartilhado",
-    "\\e-Commerce.Infra\\ModuloItem",
-    "\\e-Commerce.Infra\\ModuloProduto"
+    "\\e-Commerce.Infra\\ModuloEmail",
+    "\\e-Commerce.Infra\\ModuloProduto",
+    "\\e-Commerce.Servico",
+    "\\e-Commerce.Servico\\ModuloPedido"
   ],
-  "SelectedNode": "\\e-Commerce.Dominio\\ModuloAuth\\Usuario.cs",
+  "SelectedNode": "\\e-Commerce.API\\Config\\ExtensionMethods\\SwaggerConfigExtension.cs",
   "PreviewInSolutionExplorer": false
 }
