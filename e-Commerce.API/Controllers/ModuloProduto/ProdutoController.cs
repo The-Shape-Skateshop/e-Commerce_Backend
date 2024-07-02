@@ -47,6 +47,7 @@ namespace e_Commerce.API.Controllers.ModuloProduto
             });
         }
 
+        [Authorize]
         [ProducesResponseType(typeof(FormProdutoVM), 200)]
         public override async Task<IActionResult> Inserir(FormProdutoVM registroVM)
         {
@@ -65,12 +66,14 @@ namespace e_Commerce.API.Controllers.ModuloProduto
             return await base.SelecionarPorId(id);
         }
 
+        [Authorize]
         [ProducesResponseType(typeof(FormProdutoVM), 200)]
         public override Task<IActionResult> Editar(Guid id, FormProdutoVM registroVM)
         {
             return base.Editar(id, registroVM);
         }
 
+        [Authorize]
         public override async Task<IActionResult> Deletar(Guid id)
         {
             return await base.Deletar(id);
